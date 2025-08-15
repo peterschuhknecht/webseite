@@ -1,1 +1,49 @@
-/* Styles für Impressum */
+/* Minimal ergänzende Styles (Tailwind Utilities im Template) */
+
+.impressum-wrapper {
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+:host {
+    display: block;
+    background: #f3f4f6;
+    /* helles Grau als Seitenhintergrund */
+    padding: 2rem 0;
+}
+
+.impressum-text {
+    --measure: 72ch;
+
+    p,
+    ul,
+    ol,
+    address {
+        max-width: var(--measure);
+    }
+
+    p {
+        text-wrap: pretty;
+        hyphens: auto;
+    }
+
+    h2,
+    h3 {
+        scroll-margin-top: 5rem;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 1.25rem;
+    }
+
+    li {
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 1024px) {
+    .impressum-text {
+        --measure: 78ch;
+    }
+}

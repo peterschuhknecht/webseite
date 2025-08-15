@@ -1,1 +1,29 @@
-<router-outlet />
+<div class="min-h-screen flex flex-col bg-neutral-950">
+    <!-- Minimalistische Navigation -->
+    <header
+        class="border-b border-white/10 bg-neutral-950/95 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/80">
+        <nav class="mx-auto max-w-7xl flex items-center justify-between px-6 py-4 lg:px-10"
+            aria-label="Hauptnavigation">
+            <a routerLink="/"
+                class="text-sm font-medium text-white/80 hover:text-white transition-colors tracking-tight"
+                aria-label="Zur Startseite">Home</a>
+            <a href="#kontakt"
+                class="btn-contact-nav group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-accent px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-neutral-950 shadow-lg ring-accent transition-colors duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 hover:shadow-xl hover:shadow-accent/30 before:absolute before:inset-0 before:-translate-x-full before:rounded-md before:bg-[linear-gradient(120deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.55)_45%,rgba(255,255,255,0)_80%)] before:opacity-0 before:transition before:duration-700 before:content-[''] hover:before:translate-x-0 hover:before:opacity-100"
+                aria-label="Zum Kontaktbereich">
+                <span>Kontakt</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="flex-1">
+        <router-outlet />
+    </div>
+    <footer class="border-t border-white/10 bg-neutral-950 text-center text-xs text-white/50 py-6">
+        <p>
+            All right reserved Peter Schuhknecht @ {{ currentYear }} |
+            <a routerLink="/impressum"
+                class="underline decoration-white/30 hover:decoration-accent hover:text-white transition-colors">Impressum
+                und Datenschutz</a>
+        </p>
+    </footer>
+</div>
