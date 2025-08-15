@@ -195,3 +195,55 @@ button[type=button] {
 
 /* Wrapper für gekürzten Review Text mit Inline-"mehr" Button */
 /* (Overlay Styles entfernt, bei Bedarf wieder hinzufügen) */
+
+/* Leistungen Abschnitt */
+#leistungen {
+    scroll-margin-top: 5rem;
+    /* Anker beim Scrollen unter fixen Header falls später hinzugefügt */
+}
+
+#leistungen .group {
+    backdrop-filter: blur(2px);
+    transition: background-color .35s ease, border-color .35s ease;
+    /* transform entfernt */
+}
+
+#leistungen .group:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+    /* Kein vertikales Verschieben mehr */
+}
+
+/* Einheitliche Mindesthöhe für Leistungs-Karten */
+.service-card-minh {
+    min-height: 18rem;
+    /* Basis für kleinere Viewports */
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 640px) {
+    .service-card-minh {
+        min-height: 18rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .service-card-minh {
+        min-height: 18rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .service-card-minh {
+        min-height: 18rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    #leistungen .group,
+    #leistungen .group:hover {
+        transition: none;
+        transform: none;
+    }
+}

@@ -74,7 +74,7 @@
     </div>
 
     <!-- Kundenstimmen mit Buttons -->
-    <div class="mx-auto max-w-4xl pb-20 text-center">
+    <div class="mx-auto max-w-4xl pb-30 text-center">
 
         <div class="relative">
             <button type="button" (click)="prevReview()" aria-label="Vorherige Kundenstimme"
@@ -125,4 +125,59 @@
             </button>
         </div>
     </div>
+
+    <!-- Leistungen Abschnitt -->
+    <section id="leistungen" class="mx-auto max-w-7xl px-6 lg:px-10 pb-32"><!-- Separator über Leistungen -->
+        <div class="mx-auto max-w-7xl px-6 lg:px-10 mb-20" aria-hidden="true">
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        </div>
+        <div class="mb-14 text-center">
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Leistungen</h2>
+            <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base">Beratung, Strategie & Umsetzung für moderne
+                Software- und KI-Initiativen</p>
+            <div class="mt-6 flex flex-wrap justify-center gap-3 text-xs">
+                <button *ngFor="let cat of filterCategories" type="button" (click)="setFilter(cat)"
+                    class="px-4 py-2 rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 select-none cursor-pointer"
+                    [ngClass]="activeCategory===cat ? 'bg-accent text-neutral-950 border-accent' : 'border-white/20 text-white/70 hover:border-white/50'">
+                    {{ cat }}
+                </button>
+            </div>
+        </div>
+        <div class="grid gap-10 lg:gap-14 md:grid-cols-2 items-start">
+            <!-- Programmierung -->
+            <div>
+                <h3 class="text-xl font-semibold mb-5 flex items-center gap-3"><span
+                        class="inline-block h-2 w-2 rounded-full bg-accent"></span>Programmierung</h3>
+                <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
+                    <div *ngFor="let s of filteredProgramming"
+                        class="group service-card-minh relative rounded-xl border border-white/10 bg-white/5 p-4 flex flex-col hover:border-white/25 transition-colors">
+                        <h4 class="text-sm font-semibold leading-snug mb-2 pr-6">{{ s.title }}</h4>
+                        <p class="text-[16px] leading-snug text-white/75 mb-3">{{ s.text }}</p>
+                        <div class="mt-auto pt-1">
+                            <a [routerLink]="['/kontakt']" [queryParams]="{ service: s.title }"
+                                class="inline-flex items-center text-[11px] font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 rounded px-0"
+                                [attr.aria-label]="'Anfragen zu ' + s.title">Anfragen →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- KI -->
+            <div>
+                <h3 class="text-xl font-semibold mb-5 flex items-center gap-3"><span
+                        class="inline-block h-2 w-2 rounded-full bg-accent"></span>Künstliche Intelligenz</h3>
+                <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
+                    <div *ngFor="let s of filteredAI"
+                        class="group service-card-minh relative rounded-xl border border-white/10 bg-white/5 p-4 flex flex-col hover:border-white/25 transition-colors">
+                        <h4 class="text-sm font-semibold leading-snug mb-2 pr-6">{{ s.title }}</h4>
+                        <p class="text-[16px] leading-snug text-white/75 mb-3">{{ s.text }}</p>
+                        <div class="mt-auto pt-1">
+                            <a [routerLink]="['/kontakt']" [queryParams]="{ service: s.title }"
+                                class="inline-flex items-center text-[11px] font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 rounded px-0"
+                                [attr.aria-label]="'Anfragen zu ' + s.title">Anfragen →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </section>

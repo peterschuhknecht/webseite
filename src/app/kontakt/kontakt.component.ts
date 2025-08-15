@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // RouterLink aktuell nicht genutzt -> entfernt für sauberen Build
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
 interface Web3FormsResponse {
   success: boolean;
@@ -16,7 +17,7 @@ interface Web3FormsResponse {
   templateUrl: './kontakt.component.html',
   styleUrl: './kontakt.component.scss',
 })
-export class KontaktComponent {
+export class KontaktComponent implements OnInit {
   // Web3Forms Public Access Key (öffentlich, bereits vom Nutzer bereitgestellt)
   readonly accessKey = '12ae929c-1d96-4391-b219-d7f2743e04ac';
   // UI State via Signals (leichtgewichtig, kein Reactive Forms nötig)
@@ -24,7 +25,17 @@ export class KontaktComponent {
   success = signal(false);
   error = signal('');
 
-  constructor(private http: HttpClient) {}
+  prefilledMessage = '';
+
+  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    const serviceTitle = this.route.snapshot.queryParamMap.get('service');
+    if (serviceTitle) {
+      // Gewünschtes Format: "Betreff {Titel}\n"
+      this.prefilledMessage = `Betreff: ${serviceTitle}\n`;
+    }
+  }
 
   onSubmit(event: Event) {
     // Progressive Enhancement: Wenn JS aktiv, per AJAX senden
