@@ -18,36 +18,36 @@ export class HomeComponent {
   // Reviews wie im JSX Beispiel
   reviews: Review[] = [
     {
-      text: `Wir danken Herrn Schuhknecht für seine äußerst kompetente und freundliche Zusammenarbeit. In seinem Aufgabenbereich lag die Optimierung und Weiterentwicklung von Anwendungen zur Abwicklung von Retouren sowie eine Neuentwicklung einer Anwendung zur Auswertung von Leistungsdaten. Auch agierte er als Lead Developer und schulte seine Kollegen im Frontend Bereich durch Code Reviews, Pair Programming und Demo-Anwendungen. Alle Aufgaben wurden zeitnah, routiniert und professionell umgesetzt. Herr Schuhknecht war sehr aktiv in der Kommunikation mit dem Fachbereich und klärte Umfänge und Umsetzungsmöglichkeiten verständlich und stets freundlich. Sein jahrelanges Know-how konnte in viele Bereiche einfließen und bietet einen Mehrwert für den weiteren Betrieb der Software. Wir freuen uns, dass Herr Schuhknecht uns auch in Zukunft für Fragen seines Themengebietes zur Verfügung steht.`,
-      author: 'www.klingel.de',
-    },
-    {
-      text: `Wir danken Herrn Schuhknecht für die professionelle Zusammenarbeit. Er erfüllte unsere Anforderungen bzgl. einer grafischen Darstellung von Live-Calldaten stets zu unserer vollsten Zufriedenheit. Die Ausführung erfolgte dabei zügig und korrekt und wir konnten stets auf die fachliche Expertise von Herrn Schuhknecht zurückgreifen. Die Kommunikation während der Ausführung war ebenfalls einwandfrei und stets zielorientiert. Wir freuen uns auf weitere Projekte mit Herrn Schuhknecht!`,
-      author: 'www.questnet.de',
-    },
-    {
       text: `Wir danken Herrn Schuhknecht für seine Unterstützung. Wir schätzen unsere Zusammenarbeit, die jederzeit erfolgreich und unkompliziert verlief, ungemein und empfehlen ihn sehr gerne weiter. Auch die Qualität sowie die Ergebnisse seiner Arbeit waren immer ausgezeichnet.`,
-      author: 'www.schaeffler.de',
+      author: 'Schaeffler',
     },
     {
       text: `Vielen Dank für die konstruktive Zusammenarbeit und das Engagement im Projekt. Die maßgebliche Mitarbeit im Bereich des State-Management hilft uns perspektivisch weiter.`,
-      author: 'www.gea.com',
+      author: 'GEA Farm Technologies',
+    },
+    {
+      text: `Wir danken Herrn Schuhknecht für seine äußerst kompetente und freundliche Zusammenarbeit. In seinem Aufgabenbereich lag die Optimierung und Weiterentwicklung von Anwendungen zur Abwicklung von Retouren sowie eine Neuentwicklung einer Anwendung zur Auswertung von Leistungsdaten. Auch agierte er als Lead Developer und schulte seine Kollegen im Frontend Bereich durch Code Reviews, Pair Programming und Demo-Anwendungen. Alle Aufgaben wurden zeitnah, routiniert und professionell umgesetzt. Herr Schuhknecht war sehr aktiv in der Kommunikation mit dem Fachbereich und klärte Umfänge und Umsetzungsmöglichkeiten verständlich und stets freundlich. Sein jahrelanges Know-how konnte in viele Bereiche einfließen und bietet einen Mehrwert für den weiteren Betrieb der Software. Wir freuen uns, dass Herr Schuhknecht uns auch in Zukunft für Fragen seines Themengebietes zur Verfügung steht.`,
+      author: 'Klingel.de',
+    },
+    {
+      text: `Wir danken Herrn Schuhknecht für die professionelle Zusammenarbeit. Er erfüllte unsere Anforderungen bzgl. einer grafischen Darstellung von Live-Calldaten stets zu unserer vollsten Zufriedenheit. Die Ausführung erfolgte dabei zügig und korrekt und wir konnten stets auf die fachliche Expertise von Herrn Schuhknecht zurückgreifen. Die Kommunikation während der Ausführung war ebenfalls einwandfrei und stets zielorientiert. Wir freuen uns auf weitere Projekte mit Herrn Schuhknecht!`,
+      author: 'questnet GmbH',
     },
     {
       text: `Ich danke Herrn Schuhknecht für die effektive und professionelle Zusammenarbeit. Bei der Erstellung einer durchaus komplexen Webanwendung wurden unsere Anforderungen sehr gut umgesetzt. Durch eigene Ideen und Vorschläge wurde das Projekt gemeinsam optimiert und in der Regel im ersten Versuch ein überzeugendes Ergebnis abgeliefert. Die Kommunikation über E-Mail und Ticketsystem lief ebenso optimal. Bei entsprechendem Bedarf greifen wir gerne wieder auf Sie zurück.`,
-      author: 'www.holm-laue.de',
+      author: 'Holm & Laue',
     },
     {
       text: `Wir haben lange nach einem passenden Partner für die komplette Überarbeitung unserer Homepage gesucht. Auf unserer Suche sind wir auf Herrn Schuhknecht aufmerksam geworden. Die schnelle Umsetzung unserer Wünsche und auch die Bereitschaft, unbürokratisch bei Problemen zu helfen hat uns überzeugt. Die Seiten sind sehr gut programmiert, laden sehr schnell und überzeugen unsere Kunden durch ihr Design. Wir können die Dienstleistungen von Herrn Schuhknecht sehr empfehlen!`,
-      author: 'www.rime.de',
+      author: 'Rime GmbH',
     },
     {
       text: `Auf der Suche nach einem passenden Internetauftritt für mich, führte ich viele Gespräche und habe mich auch selbst im Netz nach dem besten Anbieter für mich umgeschaut! Was dann durch eine wirklich gute Empfehlung kam, sehen Sie wenn Sie meine Seite besuchen! Vom ersten Telefonat an, der Beratung vor Ort und den ganzen wichtigen Details bei der Erstellung der Homepage war ich von Anfang an begeistert! Selbst die Kosten hierfür sind wirklich akzeptabel und auch die Betreuung ist das was Herrn Schuhknecht auszeichnet! Ich sage nochmals Danke schön für alles und weiter so!`,
-      author: 'www.jan-doberenz.de',
+      author: 'Jan Doberenz',
     },
     {
       text: `Wir wollten den Relaunch unserer Websites und fanden dabei Design-Insel! Nachdem wir all unsere Wünsche geäußert hatten, machte Design-Insel einen modernen und professionellen Internetauftritt aus unseren alten Webseiten mit neugestalteten Strukturen, Inhalten und Design. Schnell und zuverlässig werden die ständige Erweiterung und Pflege unserer so wichtigen Medien umgesetzt. Neben der kompetenten Abwicklung der Projekte überzeugt Design-Insel vor allem durch nette, innovative und unkomplizierte Zusammenarbeit.`,
-      author: 'www.energiepark-sueptitz.de',
+      author: 'Energiepark Süptitz',
     },
     {
       text: `Ich bin überaus zufrieden mit den Dienstleistungen und Angeboten der Firma Design-Insel.de! In Sachen eCommerce, Onlineshops und Design stand mir das Unternehmen mit professionellem Rat und Tat zur Seite. Die Bearbeitung meiner Anliegen werden schnell, kompetent und zuversichtlich erledigt.`,
@@ -55,7 +55,7 @@ export class HomeComponent {
     },
     {
       text: `Ich danke Herrn Schuhknecht für die kreative Überarbeitung meiner Homepage. Sowohl die schnelle Angebotslieferung als auch eine immer kurzfristig mögliche Kommunikation und Umsetzung von Änderungswünschen unterscheidet ihn stark von anderen Anbietern. Vielen Dank! Ich empfehle Sie gern weiter!`,
-      author: 'www.anwalt-ks.de',
+      author: 'Rechtsanwalt Ricardo Kny',
     },
     {
       text: `Wir waren auf der Suche nach einer professionellen Entlastung für unser Entwickler-Team. Herr Schuhknecht hat sich schnell und zielstrebig in die übergebenen Aufgaben eingearbeitet und sehr gute Leistungen abgeliefert. Wir freuen uns auch in den nächsten Monaten mit ihm zusammenarbeiten zu dürfen.`,
