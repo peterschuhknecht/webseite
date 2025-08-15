@@ -1,0 +1,23 @@
+<section class="px-6 lg:px-10 py-16 max-w-7xl mx-auto text-white">
+    <h1 class="text-3xl md:text-4xl font-semibold tracking-tight mb-2">Case Studies</h1>
+    <p class="text-white/70 max-w-2xl mb-10">Ausgewählte Projektbeispiele mit kompaktem Impact-Fokus. Mehr Details gerne
+        im persönlichen Gespräch.</p>
+
+    <div class="grid gap-8 md:grid-cols-2">
+        <article *ngFor="let item of caseStudies"
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-3 tracking-tight">{{ item.title }}</h2>
+            <ul class="flex flex-wrap gap-2 text-[11px] uppercase font-semibold tracking-wide mb-4">
+                <li *ngFor="let m of item.metrics" class="px-2 py-1 rounded bg-accent text-neutral-950">{{ m }}</li>
+            </ul>
+            <div class="space-y-4 mt-8">
+                <p *ngFor="let para of item.description" class="text-md leading-relaxed text-white">{{ para }}</p>
+            </div>
+            <div
+                class="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-inset ring-white/5 group-hover:ring-accent/50 transition">
+            </div>
+        </article>
+    </div>
+    <p class="text-sm mt-10 text-center text-white/70">Aus Vertrags- und Datenschutzgründen wurden die Case Studies
+        verfremdet.</p>
+</section>
