@@ -58,7 +58,7 @@ npm test            # Unit tests with Karma
 
 ## Tailwind CSS Usage
 
-Tailwind CSS wird ergänzend zu SCSS verwendet (Utility-first Ansatz für Layout, Spacing, Typografie, Responsive Design). SCSS bleibt für komplexere oder gekapselte Styles.
+Tailwind CSS wird ergänzend zu SCSS verwendet (Utility-first Ansatz für Layout, Spacing, Typografie, Responsive Design). SCSS bleibt für komplexere oder gekapselte Styles. Buttons und andere klickbare Elemente sollen bei Hover- und Fokus-Zuständen den cursor-pointer zeigen.
 
 ### Grundprinzipien
 
