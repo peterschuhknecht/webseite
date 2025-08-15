@@ -1,79 +1,116 @@
 <section class="relative isolate overflow-hidden bg-neutral-950 text-white">
     <!-- Hero Text & Image -->
-    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 py-20 md:grid-cols-2 md:py-28 lg:px-10">
+    <div
+        class="mx-auto grid min-h-screen max-w-7xl grid-cols-1 place-items-center gap-10 px-6 py-16 md:grid-cols-[1fr_2fr] md:py-0 lg:px-10">
         <div class="space-y-8">
             <div
                 class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur">
-                <span class="h-2 w-2 rounded-full bg-emerald-400/80"></span>
                 <span>Ihre digitale Zukunft</span>
             </div>
-            <h1 class="text-3xl font-semibold leading-[1.15] tracking-tight sm:text-4xl lg:text-5xl">
-                KI und Software, die Probleme löst – und Umsatz schafft.
+            <h1 class="text-5xl sm:text-4xl lg:text-5xl leading-[1.2]">
+                Intelligente Softwarelösungen verwandeln
             </h1>
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-2xl shadow-emerald-500/5">
-                <p class="mb-3 text-sm font-medium text-white/80">Intelligente Softwarelösungen verwandeln:</p>
-                <ul class="space-y-2 text-white/90">
-                    <li class="flex items-start gap-3"><span
-                            class="select-none text-emerald-400">&gt;</span><span>Daten-Chaos in klare Dashboards</span>
-                    </li>
-                    <li class="flex items-start gap-3"><span
-                            class="select-none text-emerald-400">&gt;</span><span>Zeitfresser in automatisierte
-                            Tools</span></li>
-                    <li class="flex items-start gap-3"><span
-                            class="select-none text-emerald-400">&gt;</span><span>Rückständige IT in strategische
-                            Lösungen</span></li>
-                    <li class="flex items-start gap-3"><span
-                            class="select-none text-emerald-400">&gt;</span><span>Wiederkehrende Aufgaben in
-                            KI-gestützte Abläufe</span></li>
-                </ul>
-            </div>
-            <div class="flex flex-wrap gap-3 pt-2">
+
+            <ul class="space-y-2 text-white/90">
+                <li class="flex items-start gap-3"><span
+                        class="mt-2 h-2 w-2 rounded-full bg-accent flex-none opacity-80"></span><span>Daten-Chaos in
+                        klare Dashboards</span>
+                </li>
+                <li class="flex items-start gap-3"><span
+                        class="mt-2 h-2 w-2 rounded-full bg-accent flex-none opacity-80"></span><span>Zeitfresser in
+                        automatisierte
+                        Tools</span></li>
+                <li class="flex items-start gap-3"><span
+                        class="mt-2 h-2 w-2 rounded-full bg-accent flex-none opacity-80"></span><span>Rückständige
+                        IT in strategische Lösungen</span></li>
+                <li class="flex items-start gap-3"><span
+                        class="mt-2 h-2 w-2 rounded-full bg-accent flex-none opacity-80"></span><span>Wiederkehrende
+                        Aufgaben in KI-gestützte Abläufe</span></li>
+            </ul>
+            <div class="flex flex-wrap gap-5 pt-2">
                 <a href="#kontakt"
-                    class="rounded-xl bg-emerald-500 px-5 py-3 text-sm font-semibold text-neutral-950 shadow-lg transition hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-300">Kontakt</a>
+                    class="btn-contact group relative inline-flex items-center gap-2 justify-center overflow-hidden rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-neutral-950 shadow-lg ring-accent transition-colors duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 hover:shadow-xl hover:shadow-accent/30 before:absolute before:inset-0 before:-translate-x-full before:rounded-lg before:bg-[linear-gradient(120deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.55)_45%,rgba(255,255,255,0)_80%)] before:opacity-0 before:transition before:duration-700 before:content-[''] hover:before:translate-x-0 hover:before:opacity-100 after:pointer-events-none">
+                    <span>Kontakt</span>
+                    <svg class="arrow-shift h-4 w-5" viewBox="0 0 24 24" aria-hidden="true" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 12h16" />
+                        <path d="M13 6l7 6-7 6" />
+                    </svg>
+                </a>
+                <a href="#cases"
+                    class="btn-case group relative inline-flex items-center gap-3 text-left leading-tight px-2 py-2 text-sm font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950">
+                    <span class="flex flex-col">
+                        <span class="tracking-tight">Wie soll das gehen?</span>
+                        <span class="mt-0.5">Case Studies zeigen wie!</span>
+                    </span>
+                    <svg class="h-4 w-5 transition-transform duration-300 ease-out group-hover:translate-x-1"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 12h16" />
+                        <path d="M13 6l7 6-7 6" />
+                    </svg>
+                </a>
             </div>
         </div>
-        <div class="mx-auto w-full max-w-md">
-            <img src="/images/hero-image.png" alt="Hero App Vorschau"
-                class="w-full h-auto rounded-2xl shadow-2xl border border-white/10" />
-        </div>
+
+        <img src="hero-image.png" alt="Hero App Vorschau" class="ml-6 md:ml-10 scale-100 origin-left" />
+
     </div>
 
     <!-- Trust Logos -->
-    <div class="mx-auto max-w-7xl px-6 pb-10 lg:px-10">
+    <div class="mx-auto max-w-4xl pb-10">
         <p class="mb-6 text-center text-sm font-medium text-white/60">Vertrauen von führenden Unternehmen</p>
-        <div class="flex flex-wrap items-center justify-center gap-8 opacity-80 grayscale">
-            <img src="/logos/audi.svg" alt="Audi" class="h-8" />
-            <img src="/logos/condor.svg" alt="Condor" class="h-8" />
-            <img src="/logos/mercedes.svg" alt="Mercedes Benz" class="h-8" />
-            <img src="/logos/schaeffler.svg" alt="Schaeffler" class="h-8" />
-            <img src="/logos/siemens.svg" alt="Siemens" class="h-8" />
-            <img src="/logos/t-systems.svg" alt="T-Systems" class="h-8" />
-            <img src="/logos/zalando.svg" alt="Zalando" class="h-8" />
+        <div class="trust-logos px-2 py-2">
+            <img src="/logos/zalando-text-white.svg" alt="Zalando" width="896" height="172" loading="lazy"
+                decoding="async" />
+            <img src="/logos/siemens.svg" alt="Siemens" width="210" height="50" loading="lazy" decoding="async" />
+            <img src="/logos/mercedes.svg" alt="Mercedes Benz" class="invert" width="100" height="26" loading="lazy"
+                decoding="async" />
+            <img src="/logos/schaeffler.svg" alt="Schaeffler" width="164" height="11" loading="lazy" decoding="async" />
+            <img src="/logos/audi.svg" alt="Audi" class="invert audi-logo" loading="lazy" decoding="async" />
+            <img src="/logos/t-systems.svg" alt="T-Systems" width="1531" height="314" loading="lazy" decoding="async" />
+            <img src="/logos/condor.svg" alt="Condor" class="invert" width="237" height="41" loading="lazy"
+                decoding="async" />
         </div>
     </div>
 
     <!-- Kundenstimmen mit Buttons -->
-    <div class="mx-auto max-w-4xl px-6 pb-20 text-center" *ngIf="reviews?.length">
-        <div class="flex justify-center mb-4">
-            <ng-container *ngFor="let star of [0,1,2,3,4]">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
-                    class="h-6 w-6 text-emerald-400">
-                    <path
-                        d="M12 .587l3.668 7.568L24 9.423l-6 5.851L19.335 24 12 19.897 4.665 24 6 15.274 0 9.423l8.332-1.268z" />
-                </svg>
-            </ng-container>
-        </div>
-        <p class="text-lg font-semibold text-white/90 mb-6">Kundenstimmen</p>
+    <div class="mx-auto max-w-4xl pb-20 text-center">
+
         <div class="relative">
-            <button type="button" (click)="prevReview()"
-                class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-2 rounded-full">◀</button>
-            <div
-                class="mx-10 rounded-xl border border-white/10 bg-white/5 p-6 text-left min-h-[200px] flex flex-col justify-between">
-                <p class="text-sm text-white/80 mb-4 whitespace-pre-line">{{ reviews[currentIndex].text }}</p>
-                <p class="text-xs text-white/60">– {{ reviews[currentIndex].author }}</p>
+            <button type="button" (click)="prevReview()" aria-label="Vorherige Kundenstimme"
+                class="absolute left-0 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 hover:border-white/60 bg-transparent cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 select-none">
+                <span class="text-base leading-none">◀</span>
+            </button>
+            <!-- Stack: alle Karten werden übereinandergelegt (gleiche Grid-Zelle) -> Container-Höhe = höchste Karte -->
+            <div class="mx-14 md:mx-16">
+                <div class="grid relative">
+                    <div *ngFor="let review of reviews; index as i"
+                        class="col-start-1 row-start-1 rounded-lg border border-white/10 bg-white/5 p-6 text-left flex flex-col h-full transition-opacity duration-500 ease-out"
+                        [class.opacity-0]="i !== currentIndex" [class.pointer-events-none]="i !== currentIndex"
+                        [attr.aria-hidden]="i !== currentIndex">
+                        <p class="text-sm text-white/80 whitespace-pre-line">{{ review.text }}</p>
+                        <br>
+                        <div class="mt-5 flex items-center gap-3 text-xs text-white/60 mt-auto">
+                            <span class="leading-none">{{ review.author }}</span>
+                            <span class="block h-4 w-px bg-white/25"></span>
+                            <span class="flex gap-1 text-accent" aria-label="5 von 5 Sternen">
+                                <ng-container *ngFor="let star of [0,1,2,3,4]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                        class="h-4 w-4">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.851L19.335 24 12 19.897 4.665 24 6 15.274 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                </ng-container>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button type="button" (click)="nextReview()"
-                class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-2 rounded-full">▶</button>
+            <button type="button" (click)="nextReview()" aria-label="Nächste Kundenstimme"
+                class="absolute right-0 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 hover:border-white/60 bg-transparent cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 select-none">
+                <span class="text-base leading-none">▶</span>
+            </button>
         </div>
     </div>
 </section>

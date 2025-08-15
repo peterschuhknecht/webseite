@@ -1,1 +1,180 @@
 /* Styles für Home */
+
+/* Kontakt-Button Veredelungen (Utility-Ergänzungen) */
+.btn-contact {
+    position: relative;
+    isolation: isolate;
+    /* stellt sicher, dass pseudo-element blend nicht nach außen wirkt */
+    cursor: pointer;
+    /* Fallback Box-Shadow für Browser ohne layered shadow rendering */
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, .4), 0 0 0 1px rgba(0, 0, 0, .25);
+
+    /* Hover-Farbnuance wird durch Utility-Klassen gesteuert */
+
+    &:active {
+        transform: translateY(0);
+        /* schnelle Rückkehr */
+    }
+
+    /* Shine Effekt (Pseudo bereits im HTML via ::before definiert) */
+    &::before {
+        mix-blend-mode: overlay;
+        will-change: transform, opacity;
+    }
+
+    /* Optionales subtil pulsierendes Glühen im Hintergrund */
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, .4), transparent 70%);
+        opacity: 0;
+        transition: opacity .6s ease;
+        pointer-events: none;
+        mix-blend-mode: soft-light;
+    }
+
+    &:hover::after {
+        opacity: .6;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: background-color .2s linear, color .2s linear;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+/* Pfeil Animation innerhalb des Buttons */
+.btn-contact .arrow-shift {
+    transition: transform .45s cubic-bezier(.65, .05, .36, 1), opacity .45s;
+    transform: translateX(0);
+}
+
+.btn-contact:hover .arrow-shift {
+    transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .btn-contact .arrow-shift,
+    .btn-contact:hover .arrow-shift {
+        transition: none;
+        transform: none;
+    }
+}
+
+/* High Contrast (Forced Colors) Verbesserungen */
+@media (forced-colors: active) {
+    .btn-contact {
+        forced-color-adjust: none;
+        background: CanvasText;
+        color: Canvas;
+        border: 1px solid CanvasText;
+        box-shadow: none;
+    }
+
+    .btn-contact:focus-visible {
+        outline: 2px solid Highlight;
+        outline-offset: 2px;
+    }
+}
+
+/* Zweizeiliger Text-Link Button (.btn-case) */
+.btn-case {
+    position: relative;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    color: #fff;
+    /* konstant weiß */
+}
+
+/* Review Navigation Buttons */
+button[type=button] {
+    &:focus-visible {
+        outline: 2px solid var(--tw-ring-color, #38bdf8);
+        outline-offset: 2px;
+    }
+}
+
+/* Review Stack: Logik über Tailwind Utility-Klassen im Template gesteuert */
+
+.btn-case:hover,
+.btn-case:focus-visible {
+    color: #fff;
+    /* keine Farbänderung */
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-case svg {
+        transition: none !important;
+    }
+
+}
+
+@media (forced-colors: active) {
+    .btn-case {
+        color: LinkText;
+    }
+
+    .btn-case span.text-accent {
+        color: LinkText;
+    }
+
+    .btn-case:focus-visible {
+        outline: 1px solid LinkText;
+        outline-offset: 2px;
+    }
+}
+
+/* Trust Logos einzeilig skalierend */
+.trust-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* eine Zeile */
+}
+
+.trust-logos img {
+    height: clamp(1.75rem, 2.2vw, 2.5rem);
+    /* ~28px bis 40px dynamisch */
+    width: auto;
+    flex: 0 1 12%;
+    /* verteilt sich, kann schrumpfen */
+    max-width: 12%;
+    /* verhindert übergroße Logos */
+    object-fit: contain;
+}
+
+/* Audi Logo 20% kleiner */
+.trust-logos img.audi-logo {
+    height: calc(clamp(1.75rem, 2.2vw, 2.5rem) * 0.7);
+}
+
+@media (max-width: 640px) {
+    .trust-logos img {
+        flex-basis: 13%;
+        max-width: 16%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .trust-logos img {
+        flex-basis: 11%;
+    }
+}
+
+/* Review Karten: zusätzlicher Platz unter dem Text (+10% der Kartenhöhe als Leerraum) */
+.review-card {
+    position: relative;
+}
+
+.review-card .review-text {
+    padding-bottom: 10%;
+}
