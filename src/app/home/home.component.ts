@@ -80,14 +80,22 @@ export class HomeComponent {
   ];
 
   currentIndex = 0;
+  // Steuert, ob der aktuell sichtbare Review voll angezeigt wird
+  showFull = false;
 
   prevReview(): void {
     this.currentIndex =
       this.currentIndex === 0 ? this.reviews.length - 1 : this.currentIndex - 1;
+    this.showFull = false; // Bei Wechsel wieder einklappen
   }
 
   nextReview(): void {
     this.currentIndex =
       this.currentIndex === this.reviews.length - 1 ? 0 : this.currentIndex + 1;
+    this.showFull = false; // Bei Wechsel wieder einklappen
+  }
+
+  toggleFull(): void {
+    this.showFull = !this.showFull;
   }
 }

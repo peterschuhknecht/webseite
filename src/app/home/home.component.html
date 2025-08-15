@@ -89,9 +89,22 @@
                         class="col-start-1 row-start-1 rounded-lg border border-white/10 bg-white/5 p-6 text-left flex flex-col h-full transition-opacity duration-500 ease-out"
                         [class.opacity-0]="i !== currentIndex" [class.pointer-events-none]="i !== currentIndex"
                         [attr.aria-hidden]="i !== currentIndex">
-                        <p class="text-sm text-white/80 whitespace-pre-line">{{ review.text }}</p>
-                        <br>
-                        <div class="mt-5 flex items-center gap-3 text-xs text-white/60 mt-auto">
+                        <!-- Gekürzt -->
+                        <div *ngIf="!showFull" class="review-text-wrapper mb-5">
+                            <p class="review-text text-sm text-white/80 line-clamp-2">{{ review.text
+                                }}</p>
+                            <button type="button" (click)="toggleFull()"
+                                class="mt-2 inline-flex items-center text-xs font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 cursor-pointer p-0"
+                                aria-label="Vollständige Rezension anzeigen">Text anzeigen</button>
+                        </div>
+                        <!-- Vollständig -->
+                        <div *ngIf="showFull" class="review-text-wrapper mb-5">
+                            <p class="review-text text-sm text-white/80">{{ review.text }}</p>
+                            <button type="button" (click)="toggleFull()"
+                                class="mt-2 inline-flex items-center text-xs font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 cursor-pointer p-0"
+                                aria-label="Text wieder kürzen">Text ausblenden</button>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-white/60 mt-auto">
                             <span class="leading-none">{{ review.author }}</span>
                             <span class="block h-4 w-px bg-white/25"></span>
                             <span class="flex gap-1 text-accent" aria-label="5 von 5 Sternen">
