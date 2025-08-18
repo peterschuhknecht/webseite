@@ -11,16 +11,24 @@ import { CommonModule } from '@angular/common';
 export class CaseStudiesComponent {
   caseStudies = [
     {
-      title: 'Digitale Gremien & Sitzungsplattform',
+      title: 'Plattform für digitale Zusammenarbeit',
       metrics: [
-        'geringerer Vorbereitungsaufwand',
-        'häufigere Releases',
-        'konstant schnelle Ladezeiten',
+        'Zusammenarbeit optimiert',
+        'Arbeitsaufwand reduziert',
+        'Durchlaufzeiten verkürzt',
+        'Nachvollziehbarkeit erhöht',
+        'DSGVO-Standards gestärkt',
+        'Mobiler Zugriff ermöglicht',
+        'Fehlerquoten bei Unterlagen verringert',
       ],
       description: [
-        'Ausgangslage: Heterogene Dokumentenablagen, manuelle Versionierung und intransparente Abstimmungsprozesse führten zu Verzögerungen vor Sitzungen. Teilnehmer nutzten unterschiedliche Quellen; Entscheidungen waren schwer nachzuverfolgen.',
-        'Analyse & Optionen: Bewertung von drei Architekturpfaden (klassische CRUD-Listen, Event-Sourcing Light, hybride Dokument+Metadaten-Modelle). Proofs zeigten, dass eine hybride Struktur (immutable Revision + mutable Meta) revisionssichere Historien ermöglicht bei vertretbarer Komplexität. Zugriffsanalyse ergab Hot-Spots auf Agenda- und Beschlussbereichen → gezielte Optimierung via On-Demand-Lazy Loading & inkrementelle Signals Updates.',
-        'Umsetzung & Optimierung: Granulare Berechtigungen per Policy-Resolver, strukturierte Dokument-Pipeline mit Hash-Prüfung, diff-freundliche Serialisierung, Caching-Schicht für häufige Agenda-Reads. CI/CD Pipeline verkürzt durch parallele Lint/Test Stages und verwaiste Artefakt-Bereinigung. Ergebnis: Deutlich reduzierte Vorbereitung, schnellere Iterationszyklen und nachvollziehbare Beschlusshistorien.',
+        'Viele Verwaltungen und Organisationen kämpfen mit verstreuten Dokumenten, endlosen E-Mail-Schleifen und unklaren Zuständigkeiten. Abläufe werden dadurch langsam vorbereitet, Änderungen erreichen Beteiligte zu spät und Beschlüsse lassen sich nur schwer nachverfolgen. Datenschutz- und Compliance-Anforderungen erhöhen zusätzlich die Komplexität.',
+        'Umgesetzt wurde eine Webanwendung, die das komplette Management und die Zusammenarbeit an einem zentralen Ort bündelt – von der Vorbereitung bis zur Nachbereitung. Alle Beteiligten arbeiten in einem einheitlichen Ablauf, Unterlagen bleiben aktuell, und Prozessschritte werden nachvollziehbar gesteuert. Der organisatorische Aufwand sinkt spürbar, weil Abläufe in deutlich kürzerer Zeit durchlaufen werden können. ',
+        'Erreicht wurde, dass Unterlagen versioniert, sicher bereitgestellt und mit wenigen Klicks verteilt werden. Änderungen sind sofort für alle ersichtlich; Protokolle, Entscheidungen und Aufgaben bleiben lückenlos dokumentiert. So entsteht Transparenz – von der Einladung bis zur Umsetzung.',
+        'Eingebunden wurden intelligente Funktionen, die die tägliche Arbeit spürbar erleichtern: Inhalte lassen sich automatisch ordnen und wiederfinden, Zusammenfassungen unterstützen die Vorbereitung, Hinweise zu Termin- und Fristkonflikten reduzieren Fehler, und die Nachverfolgung von Beschlüssen wird beschleunigt. Die Lösung stärkt zudem Sicherheit, ermöglicht revisionssichere Arbeitsweisen und unterstützt digitale Freigaben – ohne Medienbrüche.',
+        'Aus der Perspektive der Beteiligten bedeutet das: weniger Suchzeiten, weniger Doppelarbeit, schnellere Entscheidungen. Abläufe werden besser vorbereitet, Unterlagen sind unterwegs verfügbar, und Verantwortlichkeiten sind klar. Auch mobiles Arbeiten wird unterstützt, sodass Vor- und Nachbereitung flexibel erfolgen kann.',
+        'Organisatorisch wurde die Einführung so gestaltet, dass bestehende Systeme weiter genutzt werden können. Prozesse wurden schlank modelliert, Rollen und Rechte klar definiert und Mitarbeitende gezielt befähigt. Dadurch konnte die Plattform zügig produktiv gehen und liefert seitdem messbaren Mehrwert: kürzere Durchlaufzeiten, höhere Qualität in der Entscheidungsfindung und mehr Zufriedenheit bei Mitgliedern sowie Verwaltung.',
+        'Die Lösung ist bewusst zukunftsfähig gehalten. Sie lässt sich auf weitere Zentren, Standorte oder Fachbereiche übertragen und modular ausbauen – etwa um öffentliche Informationsportale, automatisierte Berichtswege oder tiefere Integrationen in Dokumentenmanagement und Kollaborationswerkzeuge. So wächst die Plattform mit den Anforderungen, ohne an Komplexität zu gewinnen.',
       ],
     },
     {
