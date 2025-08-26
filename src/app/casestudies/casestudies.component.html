@@ -1,7 +1,7 @@
 <section class="px-6 lg:px-10 py-16 max-w-7xl mx-auto text-white">
     <h1 class="text-3xl md:text-4xl font-semibold tracking-tight mb-2">Case Studies</h1>
     <p class="text-white/70 max-w-2xl">Ausgewählte Projektbeispiele mit kompaktem Impact-Fokus.</p>
-    <p class="text-white/70 max-w-2xl mb-10">Mehr Details gerne im persönlichen Gespräch.</p>
+    <p class="text-white/70 max-w-2xl mb-8 md:mb-10">Mehr Details gerne im persönlichen Gespräch.</p>
 
     <div class="grid gap-8 grid-cols-1">
         <article *ngFor="let item of caseStudies"
@@ -9,7 +9,7 @@
             <h2 class="text-xl font-semibold mb-2 tracking-tight">{{ item.title }}</h2>
             <p class="text-accent mb-10">{{ item.subtitle }}</p>
             <!-- Metrics-Bereich: volle Breite, Einträge fließen nebeneinander -->
-            <div class="mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+            <div class="mb-8 md:mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
                 <ul class="flex flex-wrap gap-3">
                     <li *ngFor="let m of item.metrics" class="inline-flex items-center gap-2">
                         <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none"
@@ -20,7 +20,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="space-y-4 mt-6">
+            <div class="space-y-4 mt-4 md:mt-6">
                 <p *ngFor="let para of item.description" class="text-md leading-relaxed text-white">{{ para }}</p>
             </div>
             <div

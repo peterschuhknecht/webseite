@@ -1,19 +1,11 @@
 @use "tailwindcss";
 
+/* Einheitliches dunkles Design - kein Dark Mode Toggle */
 :root {
     --color-accent: #d4ff5b;
     --color-accent-hover: #c9f34a;
     --color-accent-text: #0a0a0a;
     --color-accent-rgb: 212, 255, 91;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-accent: #d4ff5b;
-        --color-accent-hover: #c9f34a;
-        --color-accent-text: #0a0a0a;
-        --color-accent-rgb: 212, 255, 91;
-    }
 }
 
 /* Safari-spezifische Fixes für iOS */
@@ -23,15 +15,6 @@
         --color-accent-hover: #c9f34a;
         --color-accent-text: #0a0a0a;
         --color-accent-rgb: 212, 255, 91;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --color-accent: #d4ff5b;
-            --color-accent-hover: #c9f34a;
-            --color-accent-text: #0a0a0a;
-            --color-accent-rgb: 212, 255, 91;
-        }
     }
 }
 
@@ -60,5 +43,99 @@
     .hover\:shadow-accent\/30:hover {
         box-shadow: 0 20px 25px -5px rgba(var(--color-accent-rgb), 0.3),
             0 8px 10px -6px rgba(var(--color-accent-rgb), 0.3);
+    }
+}
+
+/* Komponentenweite Stile für konsistente Buttons */
+@layer components {
+
+    /* Abschnittsseparatoren */
+    .section-sep {
+        --sep-alpha: .15;
+        /* Standard-Intensität */
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, var(--sep-alpha)), transparent);
+    }
+
+    /* Varianten über Hilfsklassen steuerbar */
+    .sep-weak {
+        --sep-alpha: .10;
+    }
+
+    .sep-strong {
+        --sep-alpha: .20;
+    }
+
+    /* Kontakt-Button Veredelungen (Utility-Ergänzungen) */
+    .btn-contact {
+        position: relative;
+        isolation: isolate;
+        cursor: pointer;
+        /* Fallback Box-Shadow */
+        box-shadow: 0 4px 12px -2px rgba(0, 0, 0, .4), 0 0 0 1px rgba(0, 0, 0, .25);
+
+        &:active {
+            transform: translateY(0);
+        }
+
+        &::before {
+            mix-blend-mode: overlay;
+            will-change: transform, opacity;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, .4), transparent 70%);
+            opacity: 0;
+            transition: opacity .6s ease;
+            pointer-events: none;
+            mix-blend-mode: soft-light;
+        }
+
+        &:hover::after {
+            opacity: .6;
+        }
+    }
+
+    /* Pfeil Animation innerhalb des Buttons */
+    .btn-contact .arrow-shift {
+        transition: transform .45s cubic-bezier(.65, .05, .36, 1), opacity .45s;
+        transform: translateX(0);
+    }
+
+    .btn-contact:hover .arrow-shift {
+        transform: translateX(4px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .btn-contact {
+            transition: background-color .2s linear, color .2s linear;
+        }
+
+        .btn-contact::before,
+        .btn-contact::after,
+        .btn-contact .arrow-shift {
+            display: none;
+        }
+    }
+
+    /* High Contrast (Forced Colors) */
+    @media (forced-colors: active) {
+        .btn-contact {
+            forced-color-adjust: none;
+            background: CanvasText !important;
+            color: Canvas !important;
+            border: 1px solid CanvasText;
+            box-shadow: none;
+        }
+
+        .btn-contact:focus-visible {
+            outline: 2px solid Highlight;
+            outline-offset: 2px;
+        }
     }
 }

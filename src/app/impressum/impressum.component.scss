@@ -1,25 +1,19 @@
-/* Minimal ergänzende Styles (Tailwind Utilities im Template) */
-
-.impressum-wrapper {
-    line-height: 1.6;
-    font-size: 1.05rem;
-}
+/* Dark Theme Angleichen an restliche Seiten */
 
 :host {
     display: block;
-    background: #f3f4f6;
-    /* helles Grau als Seitenhintergrund */
-    padding: 2rem 0;
 }
 
-.impressum-text {
+.legal-prose {
     --measure: 72ch;
+    line-height: 1.65;
 
     p,
     ul,
     ol,
     address {
         max-width: var(--measure);
+        color: rgba(255, 255, 255, 0.85);
     }
 
     p {
@@ -38,12 +32,12 @@
     }
 
     li {
-        line-height: 1.5;
+        line-height: 1.6;
     }
 }
 
 @media (min-width: 1024px) {
-    .impressum-text {
+    .legal-prose {
         --measure: 78ch;
     }
 }

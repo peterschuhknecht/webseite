@@ -4,73 +4,7 @@
 /* (aktuell keine zusätzlichen Styles nötig) */
 
 
-/* Kontakt-Button Veredelungen (Utility-Ergänzungen) */
-.btn-contact {
-    position: relative;
-    isolation: isolate;
-    /* stellt sicher, dass pseudo-element blend nicht nach außen wirkt */
-    cursor: pointer;
-    /* Fallback Box-Shadow für Browser ohne layered shadow rendering */
-    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, .4), 0 0 0 1px rgba(0, 0, 0, .25);
-
-    /* Hover-Farbnuance wird durch Utility-Klassen gesteuert */
-
-    &:active {
-        transform: translateY(0);
-        /* schnelle Rückkehr */
-    }
-
-    /* Shine Effekt (Pseudo bereits im HTML via ::before definiert) */
-    &::before {
-        mix-blend-mode: overlay;
-        will-change: transform, opacity;
-    }
-
-    /* Optionales subtil pulsierendes Glühen im Hintergrund */
-    &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, .4), transparent 70%);
-        opacity: 0;
-        transition: opacity .6s ease;
-        pointer-events: none;
-        mix-blend-mode: soft-light;
-    }
-
-    &:hover::after {
-        opacity: .6;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        transition: background-color .2s linear, color .2s linear;
-
-        &::before,
-        &::after {
-            display: none;
-        }
-    }
-}
-
-/* Pfeil Animation innerhalb des Buttons */
-.btn-contact .arrow-shift {
-    transition: transform .45s cubic-bezier(.65, .05, .36, 1), opacity .45s;
-    transform: translateX(0);
-}
-
-.btn-contact:hover .arrow-shift {
-    transform: translateX(4px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    .btn-contact .arrow-shift,
-    .btn-contact:hover .arrow-shift {
-        transition: none;
-        transform: none;
-    }
-}
+/* Button-Styles global verschoben (styles.scss -> .btn-contact) */
 
 /* High Contrast (Forced Colors) Verbesserungen */
 @media (forced-colors: active) {
