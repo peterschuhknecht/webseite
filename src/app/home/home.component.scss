@@ -143,34 +143,48 @@ button[type=button] {
     justify-content: space-between;
     flex-wrap: nowrap;
     /* eine Zeile */
+    gap: 0.5rem;
+    /* Mindestablstand zwischen Logos */
 }
 
 .trust-logos img {
-    height: clamp(1.75rem, 2.2vw, 2.5rem);
-    /* ~28px bis 40px dynamisch */
+    height: clamp(1.25rem, 2vw, 2.5rem);
+    /* Kleinere Mindestgröße für mobile */
     width: auto;
-    flex: 0 1 12%;
-    /* verteilt sich, kann schrumpfen */
-    max-width: 12%;
+    flex: 0 1 auto;
+    /* kann schrumpfen */
+    max-width: 15%;
     /* verhindert übergroße Logos */
     object-fit: contain;
+    min-width: 0;
+    /* wichtig für flex-shrink */
 }
 
 /* Audi Logo 20% kleiner */
 .trust-logos img.audi-logo {
-    height: calc(clamp(1.75rem, 2.2vw, 2.5rem) * 0.7);
+    height: calc(clamp(1.25rem, 2vw, 2.5rem) * 0.7);
 }
 
 @media (max-width: 640px) {
+    .trust-logos {
+        gap: 0.25rem;
+        /* weniger Abstand auf mobil */
+        justify-content: space-evenly;
+        /* gleichmäßige Verteilung */
+    }
+
     .trust-logos img {
-        flex-basis: 13%;
-        max-width: 16%;
+        max-width: 18%;
+        /* etwas größer auf sehr kleinen Bildschirmen */
+        height: clamp(1rem, 1.8vw, 1.5rem);
+        /* noch kleinere Logos auf mobil */
     }
 }
 
 @media (min-width: 1280px) {
     .trust-logos img {
-        flex-basis: 11%;
+        max-width: 12%;
+        /* größere Logos auf Desktop */
     }
 }
 
@@ -213,17 +227,17 @@ button[type=button] {
     /* Kein vertikales Verschieben mehr */
 }
 
-/* Einheitliche Mindesthöhe für Leistungs-Karten */
+/* Einheitliche Mindesthöhe für Leistungs-Karten nur bei mehrspaltigem Layout */
 .service-card-minh {
-    min-height: 18rem;
-    /* Basis für kleinere Viewports */
     display: flex;
     flex-direction: column;
+    /* Keine Mindesthöhe auf mobil - Inhalt bestimmt die Höhe */
 }
 
 @media (min-width: 640px) {
     .service-card-minh {
         min-height: 18rem;
+        /* Nur ab sm (2-spaltig) feste Mindesthöhe */
     }
 }
 

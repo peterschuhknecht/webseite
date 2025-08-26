@@ -1,7 +1,38 @@
-@import "tailwindcss";
+@use "tailwindcss";
 
 :root {
     --color-accent: #d4ff5b;
+    --color-accent-hover: #c9f34a;
+    --color-accent-text: #0a0a0a;
+    --color-accent-rgb: 212, 255, 91;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-accent: #d4ff5b;
+        --color-accent-hover: #c9f34a;
+        --color-accent-text: #0a0a0a;
+        --color-accent-rgb: 212, 255, 91;
+    }
+}
+
+/* Safari-spezifische Fixes für iOS */
+@supports (-webkit-touch-callout: none) {
+    :root {
+        --color-accent: #d4ff5b;
+        --color-accent-hover: #c9f34a;
+        --color-accent-text: #0a0a0a;
+        --color-accent-rgb: 212, 255, 91;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --color-accent: #d4ff5b;
+            --color-accent-hover: #c9f34a;
+            --color-accent-text: #0a0a0a;
+            --color-accent-rgb: 212, 255, 91;
+        }
+    }
 }
 
 @layer utilities {
@@ -15,5 +46,19 @@
 
     .ring-accent {
         --tw-ring-color: var(--color-accent);
+    }
+
+    .hover\:bg-accent:hover {
+        background-color: var(--color-accent-hover);
+    }
+
+    .shadow-accent\/30 {
+        box-shadow: 0 10px 15px -3px rgba(var(--color-accent-rgb), 0.3),
+            0 4px 6px -4px rgba(var(--color-accent-rgb), 0.3);
+    }
+
+    .hover\:shadow-accent\/30:hover {
+        box-shadow: 0 20px 25px -5px rgba(var(--color-accent-rgb), 0.3),
+            0 8px 10px -6px rgba(var(--color-accent-rgb), 0.3);
     }
 }

@@ -1,0 +1,46 @@
+/* Mobile Navigation Enhancements */
+.mobile-menu-enter {
+    animation: slideDown 0.2s ease-out forwards;
+}
+
+.mobile-menu-exit {
+    animation: slideUp 0.2s ease-in forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+/* Enhanced focus states for mobile menu items */
+@media (max-width: 768px) {
+    .mobile-menu-item:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+}

@@ -6,11 +6,10 @@ import { AboutComponent } from './about/about.component';
 import { CaseStudiesComponent } from './casestudies/casestudies.component';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'casestudies', component: CaseStudiesComponent },
   { path: 'kontakt', component: KontaktComponent },
   { path: 'impressum', component: ImpressumComponent },
-  { path: '**', redirectTo: 'home' },
+  { path: '**', redirectTo: '' },
 ];

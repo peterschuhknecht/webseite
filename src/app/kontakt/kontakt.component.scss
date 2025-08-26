@@ -1,3 +1,32 @@
+/* Safari iOS spezifische Fixes für konsistente Farbdarstellung */
 .kontakt-wrapper {
-    /* Wrapper Basis: nutzt Utilities für Layout; spezifische Anpassungen folgen bei Bedarf */
+    /* Stelle sicher, dass CSS-Variablen korrekt geladen werden */
+    --color-accent-fallback: #d4ff5b;
+
+    .bg-accent {
+        background-color: var(--color-accent, var(--color-accent-fallback, #d4ff5b)) !important;
+    }
+
+    .text-accent {
+        color: var(--color-accent, var(--color-accent-fallback, #d4ff5b)) !important;
+    }
+
+    button {
+        /* Force Hardware Acceleration für smoother Rendering auf iOS */
+        transform: translateZ(0);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Input Focus Ring Fixes für Safari */
+    input,
+    textarea {
+        appearance: none;
+        -webkit-appearance: none;
+
+        &:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--color-accent, #d4ff5b);
+        }
+    }
 }
