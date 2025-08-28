@@ -14,6 +14,7 @@ export class AppComponent {
 
   // Mobile Menu State
   isMobileMenuOpen = false;
+  isMobileLeistungenOpen = false;
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
@@ -21,5 +22,10 @@ export class AppComponent {
 
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
+    this.isMobileLeistungenOpen = false;
+  }
+
+  toggleMobileLeistungen() {
+    this.isMobileLeistungenOpen = !this.isMobileLeistungenOpen;
   }
 }

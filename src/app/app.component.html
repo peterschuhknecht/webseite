@@ -10,15 +10,37 @@
                 <a routerLink="/"
                     class="text-sm font-medium text-white/80 hover:text-white transition-colors tracking-tight"
                     aria-label="Zur Startseite">Home</a>
-                <a routerLink="/" fragment="leistungen"
-                    class="text-sm font-medium text-white/80 hover:text-white transition-colors tracking-tight cursor-pointer"
-                    aria-label="Zu Leistungen scrollen">Leistungen</a>
                 <a routerLink="/about"
                     class="text-sm font-medium text-white/80 hover:text-white transition-colors tracking-tight"
                     aria-label="Zur Über mich Seite">Über mich</a>
                 <a routerLink="/casestudies"
                     class="text-sm font-medium text-white/80 hover:text-white transition-colors tracking-tight"
                     aria-label="Zu den Case Studies">Case Studies</a>
+                <!-- Leistungen Dropdown (Desktop) -->
+                <div class="relative group leistungen">
+                    <button type="button"
+                        class="inline-flex items-center gap-1 text-sm font-medium text-white/80 hover:text-white transition-colors tracking-tight cursor-pointer"
+                        aria-haspopup="true" aria-expanded="false" aria-label="Leistungen öffnen">
+                        Leistungen
+                        <svg class="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity" viewBox="0 0 20 20"
+                            fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div
+                        class="pointer-events-none absolute left-0 top-full min-w-[220px] rounded-md border border-white/10 bg-neutral-900/95 shadow-lg backdrop-blur opacity-0 translate-y-1 transition ease-out duration-150 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0 group-hover:pointer-events-auto group-focus-within:pointer-events-auto">
+                        <div class="py-2">
+                            <a routerLink="/programmierung"
+                                class="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 cursor-pointer"
+                                aria-label="Zur Seite Programmierung">Programmierung</a>
+                            <a routerLink="/kuenstliche-intelligenz"
+                                class="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 cursor-pointer"
+                                aria-label="Zur Seite Künstliche Intelligenz">Künstliche Intelligenz</a>
+                        </div>
+                    </div>
+                </div>
                 <!-- <a routerLink="/newsletter"
                     class="text-sm font-medium text-white/80 hover:text-white transition-colors tracking-tight"
                     aria-label="Zum Newsletter">Newsletter</a> -->
@@ -50,15 +72,35 @@
                 <a routerLink="/" (click)="closeMobileMenu()"
                     class="block text-base font-medium text-white/80 hover:text-white transition-colors py-2"
                     aria-label="Zur Startseite">Home</a>
-                <a routerLink="/" fragment="leistungen" (click)="closeMobileMenu()"
-                    class="block text-base font-medium text-white/80 hover:text-white transition-colors py-2"
-                    aria-label="Zu Leistungen scrollen">Leistungen</a>
                 <a routerLink="/about" (click)="closeMobileMenu()"
                     class="block text-base font-medium text-white/80 hover:text-white transition-colors py-2"
                     aria-label="Zur Über mich Seite">Über mich</a>
                 <a routerLink="/casestudies" (click)="closeMobileMenu()"
                     class="block text-base font-medium text-white/80 hover:text-white transition-colors py-2"
                     aria-label="Zu den Case Studies">Case Studies</a>
+                <!-- Leistungen Submenü (Mobile) -->
+                <div>
+                    <button type="button" (click)="toggleMobileLeistungen()"
+                        class="flex w-full items-center justify-between text-base font-medium text-white/80 hover:text-white transition-colors py-2 cursor-pointer"
+                        [attr.aria-expanded]="isMobileLeistungenOpen" aria-controls="mobile-leistungen">
+                        <span>Leistungen</span>
+                        <svg class="h-5 w-5 transition-transform duration-200"
+                            [class.rotate-180]="isMobileLeistungenOpen" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div [hidden]="!isMobileLeistungenOpen" id="mobile-leistungen" class="pl-4 space-y-1">
+                        <a routerLink="/programmierung" (click)="closeMobileMenu()"
+                            class="block text-base text-white/80 hover:text-white transition-colors py-2 cursor-pointer"
+                            aria-label="Zur Seite Programmierung">Programmierung</a>
+                        <a routerLink="/kuenstliche-intelligenz" (click)="closeMobileMenu()"
+                            class="block text-base text-white/80 hover:text-white transition-colors py-2 cursor-pointer"
+                            aria-label="Zur Seite Künstliche Intelligenz">Künstliche Intelligenz</a>
+                    </div>
+                </div>
                 <!-- <a routerLink="/newsletter" (click)="closeMobileMenu()"
                     class="block text-base font-medium text-white/80 hover:text-white transition-colors py-2"
                     aria-label="Zum Newsletter">Newsletter</a> -->
