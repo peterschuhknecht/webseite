@@ -1,0 +1,181 @@
+<section class="text-white">
+    <!-- Hero -->
+    <div class="mx-auto max-w-4xl px-6 pt-16 pb-10 lg:px-10 md:pt-24">
+        <div
+            class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur">
+            <span>KI Newsletter</span>
+        </div>
+        <h1 class="mt-4 text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+            Peters KI Impact
+        </h1>
+        <p class="mt-3 text-xl text-white/90 leading-snug">
+            Umsetzbare Tipps für Unternehmer - in 5 Minuten.
+        </p>
+
+        <!-- Signup form -->
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="mt-8 flex flex-col sm:flex-row gap-3 max-w-xl">
+            <label class="sr-only" for="email">E‑Mail-Adresse</label>
+            <input id="email" name="email" type="email" [(ngModel)]="email" required email
+                placeholder="dein.name@example.com"
+                class="flex-1 rounded-md border border-white/10 bg-neutral-900 px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent" />
+            <button type="submit"
+                class="inline-flex items-center justify-center rounded-md bg-accent px-5 py-3 font-semibold text-neutral-950 hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 cursor-pointer">
+                Jetzt abonnieren
+            </button>
+        </form>
+        <p class="mt-3 text-xs text-white/40">1 mal pro Woche. Abmeldung jederzeit mit einem Klick.</p>
+
+        <!-- Confirmation -->
+        <div *ngIf="submitted" class="mt-4 rounded-md border border-white/10 bg-white/5 p-4 text-sm text-white/90">
+            Danke! Bitte bestätige deine Anmeldung über die E‑Mail in deinem Posteingang.
+        </div>
+    </div>
+
+    <!-- Value statement directly after Hero (prominent, no frame/background) -->
+    <div class="mx-auto max-w-4xl px-6 lg:px-10 pb-8">
+        <div class="flex items-start gap-2">
+            <h2 class="text-base md:text-lg font-semibold tracking-tight">Warum ich diesen Newsletter schreibe</h2>
+        </div>
+        <p class="mt-2 text-white/85 text-[15px] md:text-base leading-relaxed">
+            Viele KI-Beiträge bleiben bei Buzzwords und Halbwissen stehen. Hier gibt es dagegen erprobte Workflows,
+            klare Setups und
+            sofort umsetzbare Schritte.
+        </p>
+    </div>
+
+    <!-- Separator -->
+    <div class="mx-auto max-w-6xl px-6 lg:px-10 pb-10 pt-10" aria-hidden="true">
+        <div class="section-sep"></div>
+    </div>
+
+    <!-- Preview and Benefits (stacked, same width as rest) -->
+    <div class="mx-auto max-w-4xl px-6 py-12 lg:px-10 space-y-12">
+        <section class="space-y-5 pb-5">
+            <h2 class="text-2xl font-semibold tracking-tight">Was dich erwartet</h2>
+            <ul class="space-y-3 text-white/85">
+                <li class="flex items-start gap-3">
+                    <svg class="mt-1 h-4 w-4 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                        aria-hidden="true">
+                        <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Praktische Hebel, um Prozesse zu beschleunigen.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <svg class="mt-1 h-4 w-4 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                        aria-hidden="true">
+                        <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Best Practices aus Projekten: Prompts, Automationen, Tool‑Setups.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <svg class="mt-1 h-4 w-4 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                        aria-hidden="true">
+                        <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Mini‑Use‑Cases, die zeigen was möglich ist.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <svg class="mt-1 h-4 w-4 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                        aria-hidden="true">
+                        <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Insights: Was passiert in anderen Unternehmen.</span>
+                </li>
+            </ul>
+        </section>
+        <section class="space-y-5 pb-5">
+            <h2 class="text-2xl font-semibold tracking-tight">Für wen ist der Newsletter?</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <h3 class="font-semibold mb-1">Unternehmer</h3>
+                    <p class="text-sm text-white/75">Neue Lösungen für alte Probleme.</p>
+                </div>
+                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <h3 class="font-semibold mb-1">Bereichsleiter</h3>
+                    <p class="text-sm text-white/75">Mehr Überblick und Steuerung.</p>
+                </div>
+                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <h3 class="font-semibold mb-1">KMU</h3>
+                    <p class="text-sm text-white/75">Schnelle Automationen statt Großprojekt.</p>
+                </div>
+                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <h3 class="font-semibold mb-1">Teams</h3>
+                    <p class="text-sm text-white/75">Prozesse entlasten, Qualität halten.</p>
+                </div>
+                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <h3 class="font-semibold mb-1">Founder</h3>
+                    <p class="text-sm text-white/75">MVPs schneller bauen und testen.</p>
+                </div>
+                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <h3 class="font-semibold mb-1">Maker</h3>
+                    <p class="text-sm text-white/75">Neue Möglichkeiten entdecken und umsetzen.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FAQ -->
+    <div class="mx-auto max-w-4xl px-6 pb-20 lg:px-10">
+        <h2 class="text-2xl font-semibold tracking-tight mb-6">Fragen & Antworten</h2>
+        <div class="space-y-4">
+            <details class="group rounded-lg border border-white/10 bg-white/5 p-4">
+                <summary class="flex cursor-pointer list-none items-center justify-between">
+                    <span class="font-medium">Wie oft kommt der Newsletter?</span>
+                    <span class="text-white/50 group-open:rotate-90 transition-transform">›</span>
+                </summary>
+                <p class="mt-2 text-sm text-white/75">In der Regel einmal wöchentlich. Wenn es etwas wirklich Nützliches
+                    gibt, auch mal öfter.</p>
+            </details>
+            <details class="group rounded-lg border border-white/10 bg-white/5 p-4">
+                <summary class="flex cursor-pointer list-none items-center justify-between">
+                    <span class="font-medium">Welche Tools kommen vor?</span>
+                    <span class="text-white/50 group-open:rotate-90 transition-transform">›</span>
+                </summary>
+                <p class="mt-2 text-sm text-white/75">Alle Tools die aktuell wichtig sind und tatsächlich einen
+                    praktischen Nutzen haben.</p>
+            </details>
+            <details class="group rounded-lg border border-white/10 bg-white/5 p-4">
+                <summary class="flex cursor-pointer list-none items-center justify-between">
+                    <span class="font-medium">Kann ich Themen vorschlagen?</span>
+                    <span class="text-white/50 group-open:rotate-90 transition-transform">›</span>
+                </summary>
+                <p class="mt-2 text-sm text-white/75">Sehr gern. Antworte einfach auf eine Ausgabe – ich lese jede
+                    E‑Mail.</p>
+            </details>
+            <details class="group rounded-lg border border-white/10 bg-white/5 p-4">
+                <summary class="flex cursor-pointer list-none items-center justify-between">
+                    <span class="font-medium">Ist der Newsletter unabhängig?</span>
+                    <span class="text-white/50 group-open:rotate-90 transition-transform">›</span>
+                </summary>
+                <p class="mt-2 text-sm text-white/75">Ja die Inhalte sind unabhängig und basieren auf
+                    fundierten Informationen.</p>
+            </details>
+        </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="mx-auto max-w-4xl px-6 pb-24 lg:px-10">
+        <div class="rounded-xl border border-white/10 bg-white/5 p-6 md:p-8 text-center">
+            <h2 class="text-xl md:text-2xl font-semibold tracking-tight">In 5 Minuten auf neue Ideen kommen</h2>
+            <p class="mt-2 text-white/75">Melde dich an und erhalte sofort die nächste Ausgabe.</p>
+            <form #f2="ngForm" (ngSubmit)="onSubmit(f2)" class="mt-5 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+                <label class="sr-only" for="email-bottom">E‑Mail-Adresse</label>
+                <input id="email-bottom" name="email" type="email" [(ngModel)]="email" required email
+                    placeholder="dein.name@example.com"
+                    class="flex-1 rounded-md border border-white/10 bg-neutral-900 px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent" />
+                <button type="submit"
+                    class="inline-flex items-center justify-center rounded-md bg-accent px-5 py-3 font-semibold text-neutral-950 hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 cursor-pointer">
+                    Jetzt abonnieren
+                </button>
+            </form>
+            <p class="mt-3 text-xs text-white/40">Datenschutzfreundlich. Kein Weiterverkauf deiner Daten.</p>
+            <div *ngIf="submitted" class="mt-4 rounded-md border border-white/10 bg-white/5 p-3 text-sm text-white/90">
+                Danke! Bitte bestätige deine Anmeldung über die E‑Mail in deinem Posteingang.
+            </div>
+        </div>
+    </div>
+</section>

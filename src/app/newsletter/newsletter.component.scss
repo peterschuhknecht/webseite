@@ -1,0 +1,14 @@
+/* Zusätzliche Styles bei Bedarf; Tailwind Utilities werden primär im Template genutzt */
+
+button[type='submit'] {
+    cursor: pointer;
+}
+
+details>summary {
+    cursor: pointer;
+}
+
+/* Group-open indicator (fallback if Tailwind plugin is missing) */
+details[open] summary+span {
+    transform: rotate(90deg);
+}
