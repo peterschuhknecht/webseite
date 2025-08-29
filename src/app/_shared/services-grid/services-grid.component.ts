@@ -20,6 +20,8 @@ export type ServicesMode = 'both' | 'programming' | 'ai';
 export class ServicesGridComponent {
   @Input() mode: ServicesMode = 'both';
   @Input() sectionTitle = 'Leistungen';
+  @Input() subHeadline =
+    'Beratung, Strategie & Umsetzung für moderne Software- und KI-Initiativen';
 
   filterCategories = ['Alle', 'Schnellstart', 'Strategie', 'Umsetzung'];
   activeCategory: string = 'Alle';

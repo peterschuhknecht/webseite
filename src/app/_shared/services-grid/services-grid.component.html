@@ -5,8 +5,7 @@
 
     <div class="mb-14 text-center">
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">{{ sectionTitle }}</h2>
-        <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base">Beratung, Strategie & Umsetzung für moderne
-            Software- und KI-Initiativen</p>
+        <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base">{{ subHeadline }}</p>
         <div class="mt-6 flex flex-wrap justify-center gap-3 text-xs">
             <button *ngFor="let cat of filterCategories" type="button" (click)="setFilter(cat)"
                 class="px-4 py-2 rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 select-none cursor-pointer"

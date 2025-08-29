@@ -1,19 +1,31 @@
-<section class="text-white">
+<section class="relative isolate text-white">
+    <!-- dekorative Hintergrund-Glows -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div class="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-fuchsia-500/10 blur-3xl"></div>
+    </div>
+
     <!-- Hero -->
     <div
-        class="mx-auto max-w-7xl grid grid-cols-1 items-start gap-10 px-6 pt-20 pb-20 md:pt-28 md:pb-28 lg:pt:32 lg:pb-32 lg:px-10">
+        class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center gap-12 px-6 pt-24 pb-24 md:pt-32 md:pb-32 lg:pt-32 lg:pb-32 lg:px-10">
         <div class="space-y-6">
             <div
-                class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur">
+                class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 shadow-sm ring-1 ring-white/10 backdrop-blur">
                 <span>Programmierung</span>
             </div>
-            <h1 class="text-4xl lg:text-5xl leading-tight">Robuste Software. Saubere Architektur. Messbarer
-                Business-Impact.</h1>
-            <p class="text-white/80 max-w-2xl">Von MVP bis skalierbare Plattform: Ich baue performante Web- und
-                Cloud-Anwendungen, die zuverlässig ausliefern und langfristig wartbar sind.</p>
+            <h1 class="text-4xl lg:text-5xl font-semibold leading-tight tracking-tight">Zukunftsfähige Software für
+                spürbaren Geschäftserfolg.</h1>
+            <p class="text-white/80 max-w-2xl">Von MVP bis skalierbare Plattform: Ich entwickle performante Web- und
+                Cloud-Anwendungen, die zuverlässig laufen und
+                dauerhaft wartbar bleiben.</p>
+        </div>
+        <div class="relative hidden lg:block">
+            <img src="/hero-image.png" alt="" class="w-full max-w-xl rounded-2xl shadow-2xl ring-1 ring-white/10"
+                loading="lazy" decoding="async" />
         </div>
     </div>
 
     <!-- Leistungen: nur Programmierung -->
-    <app-services-grid sectionTitle="Leistungen Programmierung" mode="programming" />
+    <app-services-grid sectionTitle="Leistungen" mode="programming"
+        subHeadline="Beratung, Strategie & Umsetzung für erfolgreiche Software-Projekte" />
 </section>

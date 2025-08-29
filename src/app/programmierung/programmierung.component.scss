@@ -1,1 +1,22 @@
 /* Styles für Programmierung Landingpage */
+
+/* Interaktive Elemente: Pill/Button */
+:host ::ng-deep .ring-white\/10 {
+    cursor: default;
+}
+
+:host ::ng-deep .inline-flex.rounded-full {
+    cursor: default;
+}
+
+/* Bildveredelung für dunklen Hintergrund */
+:host ::ng-deep img[decoding="async"][loading="lazy"] {
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.98) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.98) 100%);
+}
+
+/* Auswahlfarbe etwas dezenter */
+::selection {
+    background: rgba(125, 211, 252, 0.25);
+    /* sky-300/25 */
+}
