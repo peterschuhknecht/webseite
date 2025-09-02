@@ -4,30 +4,541 @@
     <p class="text-white/70 max-w-2xl mb-8 md:mb-10">Mehr Details gerne im persönlichen Gespräch.</p>
 
     <div class="grid gap-8 grid-cols-1">
-        <article *ngFor="let item of caseStudies"
+        <!-- Case Study 1: KI-gestützte Außendienstplattform -->
+        <article
             class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
-            <h2 class="text-xl font-semibold mb-2 tracking-tight">{{ item.title }}</h2>
-            <p class="text-accent mb-10">{{ item.subtitle }}</p>
-            <!-- Metrics-Bereich: volle Breite, Einträge fließen nebeneinander -->
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">KI-gestützte Außendienstplattform</h2>
+            <p class="text-accent">Wie steigert man Effizienz, Geschwindigkeit und Abschlussquoten im Außendienst
+                durch KI?</p>
+            <div class="section-sep mb-10 mt-10"></div>
+            <div class="prose prose-invert max-w-none">
+                <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white">Ausgangssituation
+                </h3>
+                <p class="mt-0 mb-4">Die Außendienstmitarbeiter waren für die Betreuung von Bestandskunden und die
+                    Akquise neuer
+                    Geschäftskunden zuständig.</p>
+
+                <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white mt-10">
+                    Herausforderungen
+                </h3>
+                <ul class="list-disc pl-6 space-y-1 mt-0 mb-4">
+                    <li>Sehr unterschiedliche Kundenbedürfnisse (Produktion, Handel, Dienstleister)</li>
+                    <li>Komplexes Produktportfolio mit ständig neuen Updates</li>
+                    <li>Hoher administrativer Aufwand für Vorbereitung, Dokumentation und Angebotsstellung</li>
+                    <li>Lange Reaktionszeiten bei Kundenfragen, da Informationen oft nachträglich eingeholt werden
+                        mussten</li>
+                </ul>
+
+                <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white mt-10">Lösung</h3>
+                <p class="mt-0 mb-4">Einführung einer KI-gestützten Außendienstplattform, die mehrere Technologien
+                    integriert.</p>
+
+                <div class="not-prose">
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 mt-10">
+                        <div
+                            class="rounded-md border border-white/10 bg-white/5 p-4 md:p-5 transition-colors hover:border-accent/60">
+                            <h4 class="text-base font-medium leading-tight text-accent mb-2">Chatbot</h4>
+                            <p class="text-sm text-white/90">Wissensdatenbank für Außendienstmitarbeiter. Diese können
+                                sofort technische
+                                Informationen, Installationshinweise oder Lizenzmodelle abrufen. Zusätzlich steht eine
+                                KI-gestützte Suche für interne Handbücher, Produkte und Dokumentationen zur Verfügung.
+                            </p>
+                        </div>
+                        <div
+                            class="rounded-md border border-white/10 bg-white/5 p-4 md:p-5 transition-colors hover:border-accent/60">
+                            <h4 class="text-base font-medium leading-tight text-accent mb-2">KI Kundendatenbank</h4>
+                            <p class="text-sm text-white/90">Leads werden durch Predictive Analytics automatisch
+                                priorisiert (höchste Wahrscheinlichkeit zum Abschluss). Die KI schlägt
+                                Cross- und Upselling-Potenziale vor.</p>
+                        </div>
+                        <div
+                            class="rounded-md border border-white/10 bg-white/5 p-4 md:p-5 transition-colors hover:border-accent/60">
+                            <h4 class="text-base font-medium leading-tight text-accent mb-2">KI Produktkatalog</h4>
+                            <p class="text-sm text-white/90">KI erstellt personalisierte und kundenspezifische
+                                Vorschläge. Darstellung wird auf Kunden zugeschnitten.</p>
+                        </div>
+                        <div
+                            class="rounded-md border border-white/10 bg-white/5 p-4 md:p-5 transition-colors hover:border-accent/60">
+                            <h4 class="text-base font-medium leading-tight text-accent mb-2">Workflow</h4>
+                            <p class="text-sm text-white/90">Automatische Gesprächsnotizen und E-Mail-Nachbereitung
+                                senkten den Aufwand in der Nachbereitung.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                    <h3 class="mb-5 text-lg font-semibold tracking-tight leading-tight text-white">Ergebnis</h3>
+                    <ul class="flex flex-wrap gap-3">
+                        <li class="inline-flex items-center gap-2" aria-label="Weniger Rückfragen an die Zentrale">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm leading-6 text-white">Weniger Rückfragen an die Zentrale</span>
+                        </li>
+                        <li class="inline-flex items-center gap-2" aria-label="Höhere Kundenzufriedenheit">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm leading-6 text-white">Höhere Kundenzufriedenheit</span>
+                        </li>
+                        <li class="inline-flex items-center gap-2" aria-label="Mehr Abschlüsse pro Mitarbeiter">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm leading-6 text-white">Mehr Abschlüsse pro Mitarbeiter</span>
+                        </li>
+                        <li class="inline-flex items-center gap-2" aria-label="Umsatzwachstum im Außendienst">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm leading-6 text-white">Umsatzwachstum im Außendienst</span>
+                        </li>
+                        <li class="inline-flex items-center gap-2" aria-label="Schnellere Angebotszyklen">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm leading-6 text-white">Schnellere Angebotszyklen</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- Case Study 2: Plattform für digitale Zusammenarbeit -->
+        <article
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">Plattform für digitale Zusammenarbeit</h2>
+            <p class="text-accent mb-6">Wie orchestriert man hochkomplexe Arbeits-Abläufe?</p>
             <div class="mb-8 md:mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
                 <ul class="flex flex-wrap gap-3">
-                    <li *ngFor="let m of item.metrics" class="inline-flex items-center gap-2">
-                        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-sm leading-6 text-white">{{ m }}</span>
+                        </svg><span class="text-sm leading-6 text-white">Zusammenarbeit optimiert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6 text-white">Arbeitsaufwand reduziert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6 text-white">Durchlaufzeiten verkürzt</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6 text-white">Nachvollziehbarkeit erhöht</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6 text-white">DSGVO-Standards gestärkt</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6 text-white">Mobiler Zugriff ermöglicht</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6 text-white">Fehlerquoten bei Unterlagen verringert</span>
                     </li>
                 </ul>
             </div>
-            <div class="space-y-4 mt-4 md:mt-6">
-                <p *ngFor="let para of item.description" class="text-md leading-relaxed text-white">{{ para }}</p>
+            <div class="prose prose-invert max-w-none">
+                <p>Viele Verwaltungen und Organisationen kämpfen mit verstreuten Dokumenten, endlosen E-Mail-Schleifen
+                    und unklaren Zuständigkeiten. Datenschutz- und Compliance-Anforderungen erhöhen zusätzlich die
+                    Komplexität.</p>
+                <p>Umgesetzt wurde eine Webanwendung, die das komplette Management und die Zusammenarbeit an einem
+                    zentralen Ort bündelt – von der Vorbereitung bis zur Nachbereitung.</p>
+                <p>Erreicht wurde, dass Unterlagen versioniert, sicher bereitgestellt und mit wenigen Klicks verteilt
+                    werden. Protokolle, Entscheidungen und Aufgaben bleiben lückenlos dokumentiert.</p>
+                <p>Eingebunden wurden intelligente Funktionen: automatische Ordnung und Suche, Zusammenfassungen,
+                    Hinweise zu Termin- und Fristkonflikten, schnellere Nachverfolgung.</p>
+                <p>Aus der Perspektive der Beteiligten: weniger Suchzeiten, weniger Doppelarbeit, schnellere
+                    Entscheidungen. Auch mobiles Arbeiten wird unterstützt.</p>
+                <p>Organisatorisch: Prozesse schlank modelliert, Rollen und Rechte definiert, Mitarbeitende befähigt.
+                </p>
+                <p>Die Lösung ist zukunftsfähig und modular erweiterbar – ohne an Komplexität zu gewinnen.</p>
             </div>
-            <div
-                class="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-inset ring-white/5 group-hover:ring-accent/50 transition">
+        </article>
+
+        <!-- Case Study 3: Analyse-Plattform für Industrieanlagen -->
+        <article
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">Analyse-Plattform für Industrieanlagen</h2>
+            <p class="text-accent mb-6">Wie macht man weltweit führende Industrieanlagen noch effizienter?</p>
+            <div class="prose prose-invert max-w-none space-y-4">
+                <p>In der Lebensmittelbranche entstehen täglich große Datenmengen aus Anlagen, Sensorik und
+                    Qualitätsprüfungen. Häufig liegen Informationen verteilt vor, Auswertungen dauern zu lange und
+                    Entscheidungen werden verzögert.</p>
+                <p>Entwickelt wurde eine Web-Applikation zur Auswertung von Industrieanlagen auf einer skalierbaren
+                    Enterprise-Frontend-Architektur. Ziel: Kennzahlen aus Produktion und Service an einem Ort
+                    zusammenführen.</p>
+                <p>Erreicht wurde eine klare Oberfläche mit strukturierten Informationen. Veränderungen sind schnell
+                    erkennbar, Maßnahmen leichter nachverfolgbar.</p>
+                <p>Eingebunden wurden intelligente Auswertungen für Muster, Abweichungen und Störquellen.
+                    Zusammenfassungen unterstützen Planung; Standardisierung reduziert Komplexität.</p>
+                <p>Aus Anwendersicht: weniger manuelle Arbeit, schnellerer Zugang zu relevanten Kennzahlen, bessere
+                    Berichte und Audits. Mobile Nutzung inklusive.</p>
+                <p>Organisatorisch: pragmatische Schnittstellen, klare Rollen, modulare Architektur für schnelle
+                    Releases.</p>
+                <div class="mb-6 md:mb-8 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                    <ul class="flex flex-wrap gap-3">
+                        <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                                class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg><span class="text-sm leading-6">Durchlaufzeiten für Auswertungen verkürzt</span></li>
+                        <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                                class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg><span class="text-sm leading-6">Stillstandszeiten und Ausschuss reduziert</span></li>
+                        <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                                class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg><span class="text-sm leading-6">Transparenz über Anlagenleistung erhöht</span></li>
+                        <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                                class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg><span class="text-sm leading-6">Onboarding und Schulungsaufwand verringert</span></li>
+                        <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                                class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg><span class="text-sm leading-6">Release-Zyklen beschleunigt</span></li>
+                    </ul>
+                </div>
+                <p>Die Lösung ist zukunftsfähig; weitere Linien, Datenquellen und Auswertungen sind anschlussfähig.</p>
+            </div>
+        </article>
+
+        <!-- Case Study 4: Modernisierung im Retourenmanagement -->
+        <article
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">Modernisierung im Retourenmanagement</h2>
+            <p class="text-accent mb-6">Wie kann man die Verarbeitung von 100.000 Retouren pro Tag optimieren?</p>
+            <div class="mb-8 md:mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                <ul class="flex flex-wrap gap-3">
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Durchsatz erhöht</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Bearbeitungszeiten verkürzt</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Fehlerquoten reduziert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Prozesskosten gesenkt</span></li>
+                </ul>
+            </div>
+            <div class="prose prose-invert max-w-none space-y-4">
+                <p>Ausgangspunkt war ein gewachsenes System aus mehreren Anwendungen für die Annahme, Verwaltung,
+                    Bewertung und Sortierung von Retouren. Hohe Datenmengen und manuelle Schritte führten zu
+                    Verzögerungen und steigenden Kosten.</p>
+                <p>Modernisiert wurde die gesamte Verarbeitungskette – Datenflüsse bereinigt, Engpässe beseitigt,
+                    Abläufe verlässlich gemacht.</p>
+                <p>Erreicht wurde stabile Verarbeitung mehrerer hundert Millionen Datensätze und zehntausender Retouren
+                    pro Stunde.</p>
+                <p>Eingeführt wurden transparente Kriterien, Hinweise und Plausibilitätsprüfungen; Fehlentscheidungen
+                    sanken, Wiederaufbereitung wurde wirtschaftlicher.</p>
+                <p>Verbessert wurde der Betrieb durch Verantwortlichkeiten, Protokollierung und Kennzahlen nahezu in
+                    Echtzeit.</p>
+                <p>Zukunftsfähig durch modulare Architektur und saubere Datenbasis; KI-gestützte Prognosen
+                    anschlussfähig.</p>
+            </div>
+        </article>
+
+        <!-- Case Study 5: Analyse-Tools für Standorte im Energiesektor -->
+        <article
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">Analyse-Tools für Standorte im Energiesektor</h2>
+            <p class="text-accent mb-6">Wie stellt man Standort-KPIs bei 40 Mrd. Euro Umsatz im Detail dar?</p>
+            <div class="mb-8 md:mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                <ul class="flex flex-wrap gap-3">
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Datenvalidierung automatisiert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">KPI-Transparenz hergestellt</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Standort-übergreifende Vergleichbarkeit</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Analysezeiten verkürzt</span></li>
+                </ul>
+            </div>
+            <div class="prose prose-invert max-w-none space-y-4">
+                <p>Viele Organisationen mit mehreren Standorten kämpfen mit verstreuten Datenquellen, unterschiedlichen
+                    KPI-Definitionen und aufwändigen Excel-Prozessen.</p>
+                <p>Umgesetzt wurde eine Lösung zur Auswertung und Validierung großer Datenmengen mit einheitlicher
+                    Abbildung der Standort-KPIs.</p>
+                <p>Erreicht wurde steigende Datenqualität durch Validierungsregeln. Vertrauen in Zahlen steigt,
+                    Diskussionen fokussieren sich auf Maßnahmen.</p>
+                <p>Fachbereiche erhalten klare Sicht auf Leistung je Standort, Linie oder Schicht; Ursachen werden
+                    schneller erkannt.</p>
+                <p>Organisatorisch: KPI-Glossar, klare Verantwortlichkeiten, schlanke Abläufe für eine gemeinsame
+                    Datengrundlage.</p>
+                <p>Zukunftsfähig und erweiterbar um Prognosen, Anomalie-Erkennung und Szenario-Analysen.</p>
+            </div>
+        </article>
+
+        <!-- Case Study 6: Interaktive Kartenplattform für Verbindungsdaten -->
+        <article
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">Interaktive Kartenplattform für Verbindungsdaten</h2>
+            <p class="text-accent mb-6">Wie werden tausende Datenpunkte verständlich – in Echtzeit und sicher?</p>
+            <div class="mb-8 md:mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                <ul class="flex flex-wrap gap-3">
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Datenqualität erhöht</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Transparenz gesteigert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Berichtserstellung beschleunigt</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Nutzungsrate erhöht</span></li>
+                </ul>
+            </div>
+            <div class="prose prose-invert max-w-none space-y-4">
+                <p>Ausgangslage: wachsende Datenmenge ohne räumlichen Kontext; Entscheidungen dauerten zu lange.</p>
+                <p>Umgesetzt: interaktive Web-Anwendung mit Karte, die große Datenmengen übersichtlich darstellt.</p>
+                <p>Backend: Datenaufbereitung und -anreicherung; inkonsistente Einträge bereinigt, Standorte zugeordnet,
+                    Kennzahlen berechnet.</p>
+                <p>Ergebnis: gemeinsame, aktuelle Datenbasis; räumliche Muster sichtbar; Maßnahmen gezielter planbar.
+                </p>
+                <p>Performance: Aggregation und effiziente Bereitstellung für flüssige Karten, auch bei vielen
+                    Einträgen.</p>
+                <p>Sicherheit: Rollen und Rechte, DSGVO-konforme Prozesse und Speicherkonzepte.</p>
+                <p>Einführung: pragmatische Integration, geringer Schulungsaufwand, schnellere Reports.</p>
+                <p>Ausblick: modular erweiterbar, z. B. Benachrichtigungen, Prognosen, weitere Datenquellen.</p>
+            </div>
+        </article>
+
+        <!-- Case Study 7: Interaktive Montage- und Berechnungs-Plattform -->
+        <article
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">Interaktive Montage- und Berechnungs-Plattform</h2>
+            <p class="text-accent mb-6">Wie kann ich Montageabläufe und Berechnungen in der Automobilindustrie
+                interaktiv darstellen?</p>
+            <div class="mb-8 md:mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                <ul class="flex flex-wrap gap-3">
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Fehlerquote gesenkt</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Stillstandzeiten verringert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Schulungsaufwand reduziert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Service- und Garantiekosten gesenkt</span></li>
+                </ul>
+            </div>
+            <div class="prose prose-invert max-w-none space-y-4">
+                <p>Uneinheitliche Abläufe und verteiltes Wissen verursachen Fehler in Montage und Inbetriebnahme.
+                    Stillstände und Nacharbeiten treiben Kosten.</p>
+                <p>Umgesetzt: interaktive Web-Anwendung, die Wissen zentralisiert und Schritt für Schritt durch die
+                    Montage führt.</p>
+                <p>Erreicht: deutliche Senkung der Fehlerquote, kürzere Rüst- und Durchlaufzeiten, mehr Sicherheit in
+                    der Ausführung.</p>
+                <p>Eingebunden: KI-gestützte Unterstützungen zur Auffindbarkeit und optimalen Vorgehensweise;
+                    Wissenssicherung auch bei Ausfall von Schlüsselpersonen.</p>
+                <p>Organisatorisch: klare Rollen, Datenschutz berücksichtigt, modular erweiterbar auf weitere
+                    Standorte/Produkte.</p>
+            </div>
+        </article>
+
+        <!-- Case Study 8: Konfigurator für Nutz- und Flottenfahrzeuge -->
+        <article
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">Konfigurator für Nutz- und Flottenfahrzeuge</h2>
+            <p class="text-accent mb-6">Wie werden komplexe Transporter- und Baufahrzeug-Varianten verkaufsfähig
+                konfiguriert?</p>
+            <div class="mb-8 md:mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                <ul class="flex flex-wrap gap-3">
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Angebotserstellung beschleunigt</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Fehlerquoten in Angeboten gesenkt</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Abschlussquote gesteigert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Erlöse pro Auftrag erhöht</span></li>
+                </ul>
+            </div>
+            <div class="prose prose-invert max-w-none space-y-4">
+                <p>Problem: Variantenvielfalt und Abhängigkeiten machten Angebote aufwendig; Tabellen und PDFs führten
+                    zu Fehlern und langen Durchlaufzeiten.</p>
+                <p>Lösung: spezialisierter Konfigurator mit geführtem Ablauf, gültige Zusammenstellungen, schnelle
+                    Angebotserstellung.</p>
+                <p>Ergebnis: weniger Klärungsschleifen, passgenaue Konfigurationen, konsistente Preise und Bedingungen.
+                </p>
+                <p>Organisation: klare Zuständigkeiten, transparente Freigaben und zentrale Pflege der
+                    Preis-/Ausstattungslogik.</p>
+                <p>Ausblick: Übertrag auf weitere Baureihen und Märkte, schrittweise Erweiterung ohne
+                    Bedienbarkeitsverlust.</p>
+            </div>
+        </article>
+
+        <!-- Case Study 9: Intelligente Plattform für Agrarbetriebe -->
+        <article
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">Intelligente Plattform für Agrarbetriebe</h2>
+            <p class="text-accent mb-6">Wie bringe ich eine der ältesten Industrien ins digitale Zeitalter?</p>
+            <div class="mb-8 md:mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                <ul class="flex flex-wrap gap-3">
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Dünge-Bedarfsplanung präzisiert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Acker-Verwaltung optimiert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Betriebskosten gesenkt</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Erträge stabilisiert</span></li>
+                </ul>
+            </div>
+            <div class="prose prose-invert max-w-none space-y-4">
+                <p>Hürde: verstreute Informationen, Entscheidungen unter Zeitdruck, aufwendige Nachweise.</p>
+                <p>Lösung: zentrale Web-Lösung für Abläufe, Planung und Dokumentation; durchgängige Steuerung ohne
+                    Medienbrüche.</p>
+                <p>Effekt: schnellere, fundiertere Planung; Änderungen greifen sofort; saisonale Aufgaben
+                    wiederverwendbar.</p>
+                <p>Insights: Auswertungen leiten konkrete Hinweise ab; Entscheidungen werden nachvollziehbar, Erträge
+                    stabilisiert.</p>
+                <p>Dokumentation: revisionssicher; Termine und Vorgaben werden zuverlässig eingehalten.</p>
+                <p>Team-Perspektive: weniger Suchen und Rückfragen, klare Aufgaben, mobiler Zugriff.</p>
+                <p>Einführung: pragmatisch, mit gezielter Befähigung; schneller messbarer Nutzen.</p>
+                <p>Ausblick: modular erweiterbar auf weitere Flächen, Standorte und Kulturen.</p>
+            </div>
+        </article>
+
+        <!-- Case Study 10: Ladestations-Finder für Elektromobilität -->
+        <article
+            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
+            <h2 class="text-xl font-semibold mb-2 tracking-tight">Ladestations-Finder für Elektromobilität</h2>
+            <p class="text-accent mb-6">Wie finden Nutzer verlässlich eine passende Ladesäule – schnell und ohne Umwege?
+            </p>
+            <div class="mb-8 md:mb-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                <ul class="flex flex-wrap gap-3">
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Nutzerzufriedenheit erhöht</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Konversion auf der Website gesteigert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Supportanfragen reduziert</span></li>
+                    <li class="inline-flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24"
+                            class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm leading-6">Durchlaufzeiten bis zum Ladevorgang verkürzt</span></li>
+                </ul>
+            </div>
+            <div class="prose prose-invert max-w-none space-y-4">
+                <p>Problem: Suche nach passender Lademöglichkeit scheiterte an verstreuten, inkonsistenten Daten; mobile
+                    Darstellung hakte.</p>
+                <p>Lösung: nutzerzentriertes Frontend mit integriertem Ladestations-Finder, gebündelte geprüfte
+                    Standortdaten.</p>
+                <p>Ergebnis: verlässliche Optionen in Sekunden, klare Priorisierung, weniger Abbrüche, mehr erfolgreiche
+                    Ladevorgänge.</p>
+                <p>Betreiber-Vorteile: höhere Sichtbarkeit und Auslastung, weniger Support, bessere Auswertung von
+                    Nutzungsdaten.</p>
+                <p>Datenqualität: Zusammenführung und Prüfung externer Metadaten; Aktualisierungen nahtlos.</p>
+                <p>Performance und UX: schnelle Ladezeiten, barrierearme Gestaltung, hohe mobile Performance.</p>
+                <p>Datenschutz: nur notwendige Daten, transparente Einwilligungen, Einhaltung gängiger Anforderungen.
+                </p>
+                <p>Ausblick: Erweiterbar um Tarife, Reservierungen, Flottenfunktionen oder White-Label-Einsatz.</p>
             </div>
         </article>
     </div>
+
     <p class="text-sm mt-10 text-center text-white/70">Aus Vertrags- und Datenschutzgründen wurden die Case Studies
         verfremdet.</p>
 </section>
