@@ -1,0 +1,80 @@
+/* Styles für Data Science Landingpage */
+
+:host ::ng-deep img[decoding="async"][loading="lazy"] {
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.98) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0.98) 100%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.98) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0.98) 100%);
+}
+
+::selection {
+    background: rgba(125, 211, 252, 0.25);
+}
+
+.card {
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.25rem;
+    /* p-5 */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    transition: box-shadow 150ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 1.5rem;
+        /* md:p-6 */
+    }
+}
+
+.card:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 1.125rem;
+    /* text-lg */
+    font-weight: 600;
+    /* font-semibold */
+    list-style-type: disc;
+    /* wie Tailwind list-disc */
+    list-style-position: outside;
+    letter-spacing: -0.01em;
+    /* tracking-tight */
+}
+
+.card p {
+    margin-top: 0.5rem;
+    /* mt-2 */
+    font-size: 0.875rem;
+    /* text-sm */
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.card ul {
+    margin-top: 0.75rem;
+    /* mt-3 */
+    font-size: 0.875rem;
+    /* text-sm */
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 1.25rem;
+    /* pl-5 */
+}
+
+.card ul li+li {
+    margin-top: 0.25rem;
+    /* space-y-1 */
+}
+
+article:focus-within {
+    outline: 2px solid rgba(125, 211, 252, 0.45);
+    outline-offset: 2px;
+}

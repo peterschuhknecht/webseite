@@ -42,9 +42,16 @@
                                 aria-label="Zur Seite Künstliche Intelligenz" role="menuitem">Künstliche Intelligenz</a>
                             <div class="px-4 pt-3 pb-1 text-[11px] uppercase tracking-wider text-white/50">Vertiefungen
                             </div>
+                            <a routerLink="/api-schnittstellen"
+                                class="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 cursor-pointer"
+                                aria-label="Zur Seite API &amp; Schnittstellen" role="menuitem">API &amp;
+                                Schnittstellen</a>
                             <a routerLink="/barrierefreiheit"
                                 class="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 cursor-pointer"
                                 aria-label="Zur Seite Barrierefreiheit" role="menuitem">Barrierefreiheit</a>
+                            <a routerLink="/data-science"
+                                class="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 cursor-pointer"
+                                aria-label="Zur Seite Data Science" role="menuitem">Data Science</a>
                         </div>
                     </div>
                 </div>
@@ -109,9 +116,15 @@
                             class="block text-base text-white/80 hover:text-white transition-colors py-2 cursor-pointer"
                             aria-label="Zur Seite Künstliche Intelligenz">Künstliche Intelligenz</a>
                         <div class="pt-2 pb-0.5 text-[11px] uppercase tracking-wider text-white/50">Vertiefungen</div>
+                        <a routerLink="/api-schnittstellen" (click)="closeMobileMenu()"
+                            class="block text-base text-white/80 hover:text-white transition-colors py-2 cursor-pointer"
+                            aria-label="Zur Seite API &amp; Schnittstellen">API &amp; Schnittstellen</a>
                         <a routerLink="/barrierefreiheit" (click)="closeMobileMenu()"
                             class="block text-base text-white/80 hover:text-white transition-colors py-2 cursor-pointer"
                             aria-label="Zur Seite Barrierefreiheit">Barrierefreiheit</a>
+                        <a routerLink="/data-science" (click)="closeMobileMenu()"
+                            class="block text-base text-white/80 hover:text-white transition-colors py-2 cursor-pointer"
+                            aria-label="Zur Seite Data Science">Data Science</a>
                     </div>
                 </div>
                 <!-- <a routerLink="/newsletter" (click)="closeMobileMenu()"

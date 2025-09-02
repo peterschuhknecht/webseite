@@ -1,0 +1,11 @@
+// Styles spezifisch für die Web‑Apps Seite
+// Ergänzend zu Tailwind Utilities; minimal halten.
+
+.section-sep {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.08), transparent);
+}
+
+.sep-weak {
+    opacity: .7;
+}

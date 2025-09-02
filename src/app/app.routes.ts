@@ -8,6 +8,9 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { ProgrammierungComponent } from './programmierung/programmierung.component';
 import { KIComponent } from './kuenstliche-intelligenz/ki.component';
 import { BarrierefreiheitComponent } from './barrierefreiheit/barrierefreiheit.component';
+import { ApiSchnittstellenComponent } from './api-schnittstellen/api-schnittstellen.component';
+import { WebAppsComponent } from './web-apps/web-apps.component';
+import { DataScienceComponent } from './data-science/data-science.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +19,9 @@ export const routes: Routes = [
   { path: 'programmierung', component: ProgrammierungComponent },
   { path: 'kuenstliche-intelligenz', component: KIComponent },
   { path: 'barrierefreiheit', component: BarrierefreiheitComponent },
+  { path: 'data-science', component: DataScienceComponent },
+  { path: 'api-schnittstellen', component: ApiSchnittstellenComponent },
+  { path: 'web-apps', component: WebAppsComponent },
   { path: 'newsletter', component: NewsletterComponent },
   { path: 'kontakt', component: KontaktComponent },
   { path: 'impressum', component: ImpressumComponent },
