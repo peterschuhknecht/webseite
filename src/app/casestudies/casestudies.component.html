@@ -4,48 +4,149 @@
     <p class="text-white/70 max-w-2xl mb-8 md:mb-10">{{ pageIntro2 }}</p>
 
     <div class="grid gap-8 grid-cols-1">
-        <article *ngFor="let cs of caseStudies"
+        <article *ngFor="let cs of caseStudies; let i = index; trackBy: trackByIndex"
             class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full">
-            <h2 class="text-xl font-semibold mb-2 tracking-tight">{{ cs.title }}</h2>
-            <p class="text-accent mb-6">{{ cs.subtitle }}</p>
+            <header class="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                <div>
+                    <h2 class="text-xl font-semibold tracking-tight">{{ cs.title }}</h2>
+                    <p class="mt-3 text-accent">{{ cs.subtitle }}</p>
+                </div>
+                <div class="hidden md:block md:mt-0">
+                    <button *ngIf="!isExpanded(i)" type="button"
+                        class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white hover:bg-white/20 hover:border-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 shadow-sm cursor-pointer transition-colors"
+                        (click)="toggleExpand(i)" [attr.aria-expanded]="isExpanded(i)"
+                        [attr.aria-controls]="'cs-panel-' + i" [attr.aria-label]="'Mehr Details zu ' + cs.title">
+                        <span>mehr</span>
+                        <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <button *ngIf="isExpanded(i)" type="button"
+                        class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white hover:bg-white/20 hover:border-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 shadow-sm cursor-pointer transition-colors"
+                        (click)="toggleExpand(i)" [attr.aria-expanded]="isExpanded(i)"
+                        [attr.aria-controls]="'cs-panel-' + i" [attr.aria-label]="'Weniger Details zu ' + cs.title">
+                        <span>weniger</span>
+                        <svg aria-hidden="true" class="h-4 w-4 rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
 
-            <div class="section-sep mb-10 mt-10"></div>
+            <!-- Collapsed overview: visible only when not expanded -->
+            <div *ngIf="!isExpanded(i)" class="mt-5 text-white/80">
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span
+                        class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/90">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 text-accent" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3L22 20H2L12 3z" />
+                            <path d="M12 9v4m0 4h.01" />
+                        </svg>
+                        {{ formatCount(cs.challenges.length, 'Herausforderung', 'Herausforderungen') }}
+                    </span>
+                    <span class="basis-full md:hidden" aria-hidden="true"></span>
+                    <span
+                        class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/90">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 text-accent" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 7h18M3 12h18M3 17h18" />
+                        </svg>
+                        {{ formatCount(cs.features.length, 'Lösung', 'Lösungen') }}
+                    </span>
+                    <span class="basis-full md:hidden" aria-hidden="true"></span>
+                    <span
+                        class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/90">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 text-accent" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l4 4L19 7" />
+                        </svg>
+                        {{ formatCount(cs.results.length, 'Ergebnis', 'Ergebnisse') }}
+                    </span>
+                    <span class="basis-full md:hidden" aria-hidden="true"></span>
+                </div>
 
-            <div class="prose prose-invert max-w-none">
-                <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white">Ausgangssituation</h3>
-                <p class="mt-0 mb-4">{{ cs.situation }}</p>
+                <!-- Mobile bottom button for collapsed state -->
+                <div class="mt-6 border-t border-white/10 pt-4 md:hidden flex justify-center">
+                    <button type="button"
+                        class="mt-5 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 hover:border-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 shadow-sm cursor-pointer transition-colors"
+                        (click)="toggleExpand(i)" [attr.aria-expanded]="isExpanded(i)"
+                        [attr.aria-controls]="'cs-panel-' + i" [attr.aria-label]="'Mehr Details zu ' + cs.title">
+                        <span>mehr</span>
+                        <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
 
-                <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white mt-10">Herausforderungen</h3>
-                <ul class="list-disc pl-6 space-y-1 mt-0 mb-4">
-                    <li *ngFor="let c of cs.challenges">{{ c }}</li>
-                </ul>
+            </div>
 
-                <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white mt-10">Lösung</h3>
-                <p class="mt-0 mb-4">{{ cs.solution }}</p>
+            <div class="overflow-hidden transition-all duration-300 ease-in-out mt-4"
+                [style.maxHeight]="isExpanded(i) ? '4000px' : '0'" [style.opacity]="isExpanded(i) ? 1 : 0"
+                [id]="'cs-panel-' + i">
+                <div class="section-sep mb-10 mt-10"></div>
 
-                <div class="not-prose">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-10"
-                        [ngClass]="cs.gridCols ?? 'xl:grid-cols-3'">
-                        <div *ngFor="let f of cs.features"
-                            class="rounded-md border border-white/10 bg-white/5 p-4 md:p-5 transition-colors hover:border-accent/60">
-                            <h4 class="text-base font-medium leading-tight text-accent mb-2">{{ f.title }}</h4>
-                            <p class="text-sm text-white/90">{{ f.text }}</p>
+                <div class="prose prose-invert max-w-none">
+                    <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white">Ausgangssituation</h3>
+                    <p class="mt-0 mb-4">{{ cs.situation }}</p>
+
+                    <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white mt-10">Herausforderungen
+                    </h3>
+                    <ul class="list-disc pl-6 space-y-1 mt-0 mb-4">
+                        <li *ngFor="let c of cs.challenges">{{ c }}</li>
+                    </ul>
+
+                    <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white mt-10">Lösung</h3>
+                    <p class="mt-0 mb-4">{{ cs.solution }}</p>
+
+                    <div class="not-prose">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-10"
+                            [ngClass]="cs.gridCols ?? 'xl:grid-cols-3'">
+                            <div *ngFor="let f of cs.features"
+                                class="rounded-md border border-white/10 bg-white/5 p-4 md:p-5 transition-colors hover:border-accent/60">
+                                <h4 class="text-base font-medium leading-tight text-accent mb-2">{{ f.title }}</h4>
+                                <p class="text-sm text-white/90">{{ f.text }}</p>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="mt-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
+                        <h3 class="mb-5 text-lg font-semibold tracking-tight leading-tight text-white">Ergebnis</h3>
+                        <ul class="flex flex-wrap gap-3">
+                            <li *ngFor="let r of cs.results" class="inline-flex items-center gap-2"
+                                [attr.aria-label]="r">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-sm leading-6 text-white">{{ r }}</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="mt-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
-                    <h3 class="mb-5 text-lg font-semibold tracking-tight leading-tight text-white">Ergebnis</h3>
-                    <ul class="flex flex-wrap gap-3">
-                        <li *ngFor="let r of cs.results" class="inline-flex items-center gap-2" [attr.aria-label]="r">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-sm leading-6 text-white">{{ r }}</span>
-                        </li>
-                    </ul>
+                <!-- Mobile bottom button for expanded state -->
+                <div class="mt-6 border-t border-white/10 pt-4 md:hidden flex justify-center">
+                    <button type="button"
+                        class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 hover:border-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 shadow-sm cursor-pointer transition-colors"
+                        (click)="toggleExpand(i)" [attr.aria-expanded]="isExpanded(i)"
+                        [attr.aria-controls]="'cs-panel-' + i" [attr.aria-label]="'Weniger Details zu ' + cs.title">
+                        <span>weniger</span>
+                        <svg aria-hidden="true" class="h-4 w-4 rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
                 </div>
+
             </div>
         </article>
     </div>

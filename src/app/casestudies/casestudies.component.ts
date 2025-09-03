@@ -31,6 +31,29 @@ export class CaseStudiesComponent {
   pageNote =
     'Aus Vertrags- und Datenschutzgründen wurden die Case Studies verfremdet.';
 
+  // Steuerung für Aus-/Einklappen je Case Study
+  private expanded = new Set<number>();
+
+  trackByIndex(index: number) {
+    return index;
+  }
+
+  isExpanded(index: number): boolean {
+    return this.expanded.has(index);
+  }
+
+  toggleExpand(index: number): void {
+    if (this.expanded.has(index)) {
+      this.expanded.delete(index);
+    } else {
+      this.expanded.add(index);
+    }
+  }
+
+  formatCount(count: number, singular: string, plural: string): string {
+    return `${count} ${count === 1 ? singular : plural}`;
+  }
+
   caseStudies: CaseStudy[] = [
     {
       title: 'KI-gestützte Außendienstplattform',
