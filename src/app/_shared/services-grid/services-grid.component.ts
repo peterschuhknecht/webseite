@@ -16,6 +16,7 @@ export type ServicesMode = 'both' | 'programming' | 'ai';
   imports: [CommonModule, RouterLink],
   templateUrl: './services-grid.component.html',
   styleUrl: './services-grid.component.scss',
+  host: { '[attr.data-mode]': 'mode' },
 })
 export class ServicesGridComponent {
   @Input() mode: ServicesMode = 'both';

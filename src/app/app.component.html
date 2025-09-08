@@ -1,7 +1,6 @@
-<div class="min-h-screen flex flex-col bg-neutral-950">
+<div class="min-h-screen flex flex-col bg-white text-neutral-900">
     <!-- Minimalistische Navigation -->
-    <header
-        class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/95 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/80">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950">
         <nav class="mx-auto max-w-7xl flex items-center justify-between px-6 py-4 lg:px-10"
             aria-label="Hauptnavigation">
 
@@ -30,7 +29,7 @@
                         </svg>
                     </button>
                     <div
-                        class="pointer-events-none absolute left-0 top-full min-w-[220px] rounded-md border border-white/10 bg-neutral-900/95 shadow-lg backdrop-blur opacity-0 translate-y-1 transition ease-out duration-150 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0 group-hover:pointer-events-auto group-focus-within:pointer-events-auto">
+                        class="pointer-events-none absolute left-0 top-full min-w-[220px] rounded-md border border-white/10 bg-neutral-950 shadow-lg opacity-0 translate-y-1 transition ease-out duration-150 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0 group-hover:pointer-events-auto group-focus-within:pointer-events-auto">
                         <div class="py-2" role="menu" aria-label="Leistungen">
                             <div class="px-4 pt-2 pb-1 text-[11px] uppercase tracking-wider text-white/50">
                                 Kernleistungen</div>
@@ -81,7 +80,7 @@
         </nav>
 
         <!-- Mobile Menu -->
-        <div *ngIf="isMobileMenuOpen" class="md:hidden border-t border-white/10 bg-neutral-950/98 backdrop-blur">
+        <div *ngIf="isMobileMenuOpen" class="md:hidden border-t border-white/10 bg-neutral-950">
             <div class="px-6 py-4 space-y-3">
                 <a routerLink="/" (click)="closeMobileMenu()"
                     class="block text-base font-medium text-white/80 hover:text-white transition-colors py-2"

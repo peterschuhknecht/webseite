@@ -1,51 +1,50 @@
-<section class="about-root text-white">
+<section class="about-root text-neutral-900">
     <!-- Hero / Intro -->
     <div
         class="mx-auto max-w-7xl px-6 lg:px-10 pt-24 md:pt-28 pb-20 md:pb-24 grid gap-12 md:gap-14 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] items-start md:items-center">
         <div class="relative order-2 md:order-1">
             <div class="portrait-wrapper">
                 <img src="/peter-schuhknecht.jpg" alt="Profilfoto Peter Schuhknecht"
-                    class="portrait rounded-2xl shadow-xl ring-1 ring-white/10 object-cover" loading="lazy"
+                    class="portrait rounded-2xl shadow-xl ring-1 ring-neutral-200 object-cover" loading="lazy"
                     decoding="async" />
                 <div class="portrait-glow" aria-hidden="true"></div>
             </div>
         </div>
         <div class="space-y-8 order-1 md:order-2">
             <div
-                class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[11px] uppercase tracking-wide text-white/60">
+                class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-4 py-1.5 text-[11px] uppercase tracking-wide text-neutral-600">
                 <span>Software | Künstliche Intelligenz | Beratung</span>
             </div>
             <h1 class="text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
                 Skalierbare Software & KI<br class="hidden sm:block" /> für nachhaltige Produktivität
             </h1>
-            <p class="text-white leading-relaxed max-w-prose text-sm md:text-base">
+            <p class="text-neutral-800 leading-relaxed max-w-prose text-sm md:text-base">
                 Als Senior Full‑Stack Entwickler und KI-Spezialist unterstütze ich Unternehmen vom MVP bis zur
                 Plattform.
             </p>
             <ul class="grid gap-3 sm:grid-cols-2 text-sm">
                 <li *ngFor="let p of keyPoints" class="flex items-start gap-3">
                     <span class="mt-1 h-2 w-2 rounded-full bg-accent flex-none"></span>
-                    <span class="text-white/85 leading-snug">{{ p }}</span>
+                    <span class="text-neutral-700 leading-snug">{{ p }}</span>
                 </li>
             </ul>
-            <p class="text-white text-xs md:text-sm leading-relaxed max-w-prose mt-5">
+            <p class="text-neutral-800 text-xs md:text-sm leading-relaxed max-w-prose mt-5">
                 Konzerne und Mittelstand vertrauen mir bei komplexen Initiativen – von Architekturentscheidungen über
                 Implementierung bis Release.
             </p>
             <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mt-4">
-                <img src="/logos/zalando-text-white.svg" alt="Zalando" class="h-3 w-auto" loading="lazy"
-                    decoding="async" />
+                <img src="/logos/zalando.svg" alt="Zalando" class="h-3 w-auto" loading="lazy" decoding="async" />
                 <img src="/logos/siemens.svg" alt="Siemens" class="h-3 w-auto" loading="lazy" decoding="async" />
-                <img src="/logos/mercedes.svg" alt="Mercedes Benz" class="h-3.5 w-auto invert" loading="lazy"
+                <img src="/logos/mercedes.svg" alt="Mercedes Benz" class="h-3.5 w-auto" loading="lazy"
                     decoding="async" />
                 <img src="/logos/schaeffler.svg" alt="Schaeffler" class="h-2 w-auto" loading="lazy" decoding="async" />
-                <img src="/logos/audi.svg" alt="Audi" class="h-3 w-auto invert" loading="lazy" decoding="async" />
+                <img src="/logos/audi.svg" alt="Audi" class="h-3 w-auto" loading="lazy" decoding="async" />
                 <img src="/logos/t-systems.svg" alt="T-Systems" class="h-3 w-auto" loading="lazy" decoding="async" />
-                <img src="/logos/condor.svg" alt="Condor" class="h-3 w-auto invert" loading="lazy" decoding="async" />
+                <img src="/logos/condor.svg" alt="Condor" class="h-3 w-auto" loading="lazy" decoding="async" />
             </div>
             <div class="flex flex-wrap gap-5 pt-4">
                 <a routerLink="/kontakt"
-                    class="btn-contact group relative inline-flex items-center gap-2 justify-center overflow-hidden rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-neutral-950 shadow-lg ring-accent transition-colors duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 hover:shadow-xl hover:shadow-accent/30 before:absolute before:inset-0 before:-translate-x-full before:rounded-lg before:bg-[linear-gradient(120deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.55)_45%,rgba(255,255,255,0)_80%)] before:opacity-0 before:transition before:duration-700 before:content-[''] hover:before:translate-x-0 hover:before:opacity-100 cursor-pointer">
+                    class="btn-contact group relative inline-flex items-center gap-2 justify-center overflow-hidden rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-neutral-950 shadow-lg ring-accent transition-colors duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white hover:shadow-xl hover:shadow-accent/30 before:absolute before:inset-0 before:-translate-x-full before:rounded-lg before:bg-[linear-gradient(120deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.55)_45%,rgba(255,255,255,0)_80%)] before:opacity-0 before:transition before:duration-700 before:content-[''] hover:before:translate-x-0 hover:before:opacity-100 cursor-pointer">
                     <span>Kontakt</span>
                     <svg class="arrow-shift h-4 w-5" viewBox="0 0 24 24" aria-hidden="true" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -53,7 +52,7 @@
                         <path d="M13 6l7 6-7 6" />
                     </svg>
                 </a>
-                <div class="text-xs text-white/50 flex items-center gap-2">
+                <div class="text-xs text-neutral-500 flex items-center gap-2">
                     <span class="inline-block h-2 w-2 rounded-full bg-green-500 animate-pulse"></span> Ab sofort
                     verfügbar
                 </div>
@@ -126,7 +125,7 @@
         <section class="grid gap-12 lg:grid-cols-2 items-start">
             <div class="space-y-6">
                 <h2 class="section-heading">Wie ich arbeite</h2>
-                <p class="lead text-white/70 text-sm md:text-base max-w-prose">
+                <p class="lead text-neutral-600 text-sm md:text-base max-w-prose">
                     Ihr Projekt erhält sofort Struktur: klare Ziele, priorisierte Backlogs und sichtbare Zwischenstände.
                     Ich steige schnell ein, reduziere Komplexität und schaffe die technische Basis für nachhaltige
                     Geschwindigkeit.
@@ -134,13 +133,13 @@
                 <ul class="space-y-3 text-sm">
                     <li *ngFor="let v of valueAdds" class="flex items-start gap-3">
                         <span class="mt-1 h-2 w-2 rounded-full bg-accent flex-none"></span>
-                        <span class="text-white/80 leading-snug">{{ v }}</span>
+                        <span class="text-neutral-700 leading-snug">{{ v }}</span>
                     </li>
                 </ul>
             </div>
             <div class="space-y-6">
                 <h2 class="section-heading">Fokus & Themen</h2>
-                <p class="text-white/70 text-sm md:text-base max-w-prose">
+                <p class="text-neutral-600 text-sm md:text-base max-w-prose">
                     Ich verbinde saubere Software-Engineering-Prinzipien mit moderner KI, damit Teams schneller liefern
                     und
                     Entscheidungen daten- & nutzerzentriert treffen können.
@@ -148,7 +147,7 @@
                 <ul class="space-y-3 text-sm">
                     <li *ngFor="let f of focusAreas" class="flex items-start gap-3">
                         <span class="mt-1 h-2 w-2 rounded-full bg-accent flex-none"></span>
-                        <span class="text-white/80 leading-snug">{{ f }}</span>
+                        <span class="text-neutral-700 leading-snug">{{ f }}</span>
                     </li>
                 </ul>
             </div>

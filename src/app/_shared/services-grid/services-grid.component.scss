@@ -2,3 +2,8 @@
 .service-card-minh {
     min-height: 160px;
 }
+
+/* Auf der Startseite (mode="both" => insgesamt 4 Spalten) höher */
+:host([data-mode="both"]) .service-card-minh {
+    min-height: 280px;
+}

@@ -1,11 +1,11 @@
-<section class="px-6 lg:px-10 py-16 max-w-7xl mx-auto text-white">
+<section class="px-6 lg:px-10 py-16 max-w-7xl mx-auto text-neutral-900">
     <h1 class="text-3xl md:text-4xl font-semibold tracking-tight mb-2">{{ pageTitle }}</h1>
-    <p class="text-white/70 max-w-2xl">{{ pageIntro1 }}</p>
-    <p class="text-white/70 max-w-2xl mb-8 md:mb-10">{{ pageIntro2 }}</p>
+    <p class="text-neutral-600 max-w-2xl">{{ pageIntro1 }}</p>
+    <p class="text-neutral-600 max-w-2xl mb-8 md:mb-10">{{ pageIntro2 }}</p>
 
     <div class="grid gap-8 grid-cols-1 md:grid-cols-2">
         <article *ngFor="let cs of caseStudies; let i = index; trackBy: trackByIndex"
-            class="group relative rounded-lg border border-white/10 bg-neutral-900/40 p-8 backdrop-blur-sm transition-colors hover:border-accent/60 w-full col-span-1"
+            class="group relative rounded-lg border border-neutral-200 bg-neutral-50 p-8 transition-colors hover:border-neutral-400 w-full col-span-1 shadow-sm"
             [ngClass]="{ 'md:col-span-2': isExpanded(i) }">
             <header class="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
                 <div>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="hidden md:block md:mt-0">
                     <button *ngIf="!isExpanded(i)" type="button"
-                        class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white hover:bg-white/20 hover:border-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 shadow-sm cursor-pointer transition-colors"
+                        class="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-neutral-50 px-3 py-1.5 text-sm font-semibold text-neutral-800 hover:bg-white hover:border-neutral-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white shadow-sm cursor-pointer transition-colors"
                         (click)="toggleExpand(i)" [attr.aria-expanded]="isExpanded(i)"
                         [attr.aria-controls]="'cs-panel-' + i" [attr.aria-label]="'Mehr Details zu ' + cs.title">
                         <span>mehr</span>
@@ -25,7 +25,7 @@
                         </svg>
                     </button>
                     <button *ngIf="isExpanded(i)" type="button"
-                        class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white hover:bg-white/20 hover:border-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 shadow-sm cursor-pointer transition-colors"
+                        class="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-neutral-50 px-3 py-1.5 text-sm font-semibold text-neutral-800 hover:bg-white hover:border-neutral-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white shadow-sm cursor-pointer transition-colors"
                         (click)="toggleExpand(i)" [attr.aria-expanded]="isExpanded(i)"
                         [attr.aria-controls]="'cs-panel-' + i" [attr.aria-label]="'Weniger Details zu ' + cs.title">
                         <span>weniger</span>
@@ -39,10 +39,10 @@
             </header>
 
             <!-- Collapsed overview: visible only when not expanded -->
-            <div *ngIf="!isExpanded(i)" class="mt-5 text-white/80">
+            <div *ngIf="!isExpanded(i)" class="mt-5 text-neutral-700">
                 <div class="mt-3 flex flex-wrap gap-2">
                     <span
-                        class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/90">
+                        class="inline-flex items-center gap-1 rounded-full border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-xs text-neutral-800">
                         <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 text-accent" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 3L22 20H2L12 3z" />
@@ -52,7 +52,7 @@
                     </span>
                     <span class="basis-full md:hidden" aria-hidden="true"></span>
                     <span
-                        class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/90">
+                        class="inline-flex items-center gap-1 rounded-full border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-xs text-neutral-800">
                         <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 text-accent" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 7h18M3 12h18M3 17h18" />
@@ -61,7 +61,7 @@
                     </span>
                     <span class="basis-full md:hidden" aria-hidden="true"></span>
                     <span
-                        class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/90">
+                        class="inline-flex items-center gap-1 rounded-full border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-xs text-neutral-800">
                         <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 text-accent" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 13l4 4L19 7" />
@@ -72,9 +72,9 @@
                 </div>
 
                 <!-- Mobile bottom button for collapsed state -->
-                <div class="mt-6 border-t border-white/10 pt-4 md:hidden flex justify-center">
+                <div class="mt-6 border-t border-neutral-200 pt-4 md:hidden flex justify-center">
                     <button type="button"
-                        class="mt-5 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 hover:border-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 shadow-sm cursor-pointer transition-colors"
+                        class="mt-5 inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-neutral-50 px-4 py-2 text-sm font-semibold text-neutral-800 hover:bg-white hover:border-neutral-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white shadow-sm cursor-pointer transition-colors"
                         (click)="toggleExpand(i)" [attr.aria-expanded]="isExpanded(i)"
                         [attr.aria-controls]="'cs-panel-' + i" [attr.aria-label]="'Mehr Details zu ' + cs.title">
                         <span>mehr</span>
@@ -93,32 +93,35 @@
                 [id]="'cs-panel-' + i">
                 <div class="section-sep mb-10 mt-10"></div>
 
-                <div class="prose prose-invert max-w-none">
-                    <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white">Ausgangssituation</h3>
+                <div class="prose max-w-none">
+                    <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-neutral-900">Ausgangssituation
+                    </h3>
                     <p class="mt-0 mb-4">{{ cs.situation }}</p>
 
-                    <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white mt-10">Herausforderungen
+                    <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-neutral-900 mt-10">
+                        Herausforderungen
                     </h3>
                     <ul class="list-disc pl-6 space-y-1 mt-0 mb-4">
                         <li *ngFor="let c of cs.challenges">{{ c }}</li>
                     </ul>
 
-                    <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-white mt-10">Lösung</h3>
+                    <h3 class="mt-6 mb-2 font-semibold tracking-tight leading-tight text-neutral-900 mt-10">Lösung</h3>
                     <p class="mt-0 mb-4">{{ cs.solution }}</p>
 
                     <div class="not-prose">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-10"
                             [ngClass]="cs.gridCols ?? 'xl:grid-cols-3'">
                             <div *ngFor="let f of cs.features"
-                                class="rounded-md border border-white/10 bg-white/5 p-4 md:p-5 transition-colors hover:border-accent/60">
+                                class="rounded-md border border-neutral-200 bg-neutral-50 p-4 md:p-5 transition-colors hover:border-neutral-300">
                                 <h4 class="text-base font-medium leading-tight text-accent mb-2">{{ f.title }}</h4>
-                                <p class="text-sm text-white/90">{{ f.text }}</p>
+                                <p class="text-sm text-neutral-700">{{ f.text }}</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-10 w-full rounded-md border border-white/10 bg-white/5 p-4 md:p-6">
-                        <h3 class="mb-5 text-lg font-semibold tracking-tight leading-tight text-white">Ergebnis</h3>
+                    <div class="mt-10 w-full rounded-md border border-neutral-200 bg-neutral-50 p-4 md:p-6">
+                        <h3 class="mb-5 text-lg font-semibold tracking-tight leading-tight text-neutral-900">Ergebnis
+                        </h3>
                         <ul class="flex flex-wrap gap-3">
                             <li *ngFor="let r of cs.results" class="inline-flex items-center gap-2"
                                 [attr.aria-label]="r">
@@ -127,16 +130,16 @@
                                     stroke-linejoin="round">
                                     <path d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                <span class="text-sm leading-6 text-white">{{ r }}</span>
+                                <span class="text-sm leading-6 text-neutral-800">{{ r }}</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Mobile bottom button for expanded state -->
-                <div class="mt-6 border-t border-white/10 pt-4 md:hidden flex justify-center">
+                <div class="mt-6 border-t border-neutral-200 pt-4 md:hidden flex justify-center">
                     <button type="button"
-                        class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 hover:border-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 shadow-sm cursor-pointer transition-colors"
+                        class="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-neutral-50 px-4 py-2 text-sm font-semibold text-neutral-800 hover:bg-white hover:border-neutral-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white shadow-sm cursor-pointer transition-colors"
                         (click)="toggleExpand(i)" [attr.aria-expanded]="isExpanded(i)"
                         [attr.aria-controls]="'cs-panel-' + i" [attr.aria-label]="'Weniger Details zu ' + cs.title">
                         <span>weniger</span>
@@ -152,5 +155,5 @@
         </article>
     </div>
 
-    <p class="text-sm mt-10 text-center text-white/70">{{ pageNote }}</p>
+    <p class="text-sm mt-10 text-center text-neutral-600">{{ pageNote }}</p>
 </section>
