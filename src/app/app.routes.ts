@@ -11,6 +11,7 @@ import { BarrierefreiheitComponent } from './barrierefreiheit/barrierefreiheit.c
 import { ApiSchnittstellenComponent } from './api-schnittstellen/api-schnittstellen.component';
 import { WebAppsComponent } from './web-apps/web-apps.component';
 import { DataScienceComponent } from './data-science/data-science.component';
+import { SoftwareArchitektComponent } from './software-architekt/software-architekt.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ export const routes: Routes = [
   { path: 'kuenstliche-intelligenz', component: KIComponent },
   { path: 'barrierefreiheit', component: BarrierefreiheitComponent },
   { path: 'data-science', component: DataScienceComponent },
+  { path: 'software-architekt', component: SoftwareArchitektComponent },
   { path: 'api-schnittstellen', component: ApiSchnittstellenComponent },
   { path: 'web-apps', component: WebAppsComponent },
   { path: 'newsletter', component: NewsletterComponent },

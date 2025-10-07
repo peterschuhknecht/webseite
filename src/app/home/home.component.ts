@@ -28,6 +28,10 @@ export class HomeComponent {
       author: 'Schaeffler',
     },
     {
+      text: `Wir danken Herrn Peter Schuhknecht für die hervorragende und professionelle Zusammenarbeit. Er brachte seinen sehr hohen Wissensstand in Angular ein und unterstützte maßgeblich bei der Neuentwicklung einer modernen Webanwendung auf Basis einer bestehenden Client/Server-Lösung. Darüber hinaus brachte er wertvolle Expertise beim Aufbau einer zukunftssicheren Projektstruktur für eine große Enterprise-Anwendung ein. Herr Peter Schuhknecht arbeitet selbständig, lösungsorientiert und überzeugt durch ein kreatives Herangehen an komplexe Aufgabenstellungen. Die Zusammenarbeit gestaltete sich jederzeit konstruktiv, zuverlässig und termingerecht. Besonders hervorzuheben ist die gemeinsame Suche nach tragfähigen und nachhaltigen Lösungen, die die Weiterentwicklung der Anwendung langfristig sichern. Wir schätzen seine Expertise sehr und empfehlen Herrn Peter Schuhknecht uneingeschränkt weiter.`,
+      author: 'Somacos GmbH',
+    },
+    {
       text: `Vielen Dank für die konstruktive Zusammenarbeit und das Engagement im Projekt. Die maßgebliche Mitarbeit im Bereich des State-Management hilft uns perspektivisch weiter.`,
       author: 'GEA Farm Technologies',
     },
