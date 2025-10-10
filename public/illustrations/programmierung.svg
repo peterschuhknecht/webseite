@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Professionelle Softwareentwicklung</title>
+  <desc id="desc">Illustration mit Code-Zeilen, Zahnrädern und Werkzeugen für die Programmierung.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff3e0" />
+      <stop offset="100%" stop-color="#ffe0b2" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" rx="48" />
+  <rect x="220" y="200" width="760" height="420" rx="32" fill="#212121" opacity="0.9" />
+  <g fill="#ffcc80" font-family="'Fira Code', monospace" font-size="32" xml:space="preserve">
+    <text x="280" y="280">&lt;code&gt;</text>
+    <text x="320" y="330">const sprint = build();</text>
+    <text x="320" y="380">deploy(sprint).monitor();</text>
+    <text x="280" y="430">&lt;/code&gt;</text>
+  </g>
+  <g transform="translate(780 520)">
+    <circle cx="0" cy="0" r="90" fill="#fb8c00" opacity="0.4" />
+    <path d="M-60-10h120v20h-120z" fill="#ef6c00" />
+    <path d="M-10-60h20v120h-20z" fill="#ef6c00" />
+    <circle cx="0" cy="0" r="40" fill="#ffb74d" />
+  </g>
+  <g transform="translate(360 560)">
+    <circle cx="0" cy="0" r="72" fill="#ef6c00" opacity="0.5" />
+    <path d="M0-48l20 24-20 24-20-24z" fill="#fff3e0" />
+    <path d="M60 0l-24 20-24-20 24-20z" fill="#fff3e0" />
+  </g>
+</svg>
