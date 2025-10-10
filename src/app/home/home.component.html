@@ -85,13 +85,14 @@
 
     <!-- Heller Content-Bereich -->
     <!-- Trust Logos auf weißem Hintergrund, dunkle Schrift/Farbe -->
-    <div class="mx-auto max-w-7xl px-6 lg:px-10 pb-10 pt-20 text-neutral-900">
-        <div class="mb-10 text-center">
-            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Mittelstand im Fokus</h2>
-            <p class="text-neutral-600 max-w-2xl mx-auto text-sm md:text-base">Vertrauen bei führenden Marken.</p>
-        </div>
-        <div class="trust-logos px-2 py-2 overflow-hidden">
-            <img src="/logos/zalando.svg" alt="Zalando" width="896" height="172" loading="lazy" decoding="async" />
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 pb-20 pt-20 text-neutral-100">
+        <div class="rounded-3xl border border-white/5 bg-white/5 px-8 py-12 lg:px-12 backdrop-blur-sm">
+            <div class="mb-10 text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Mittelstand im Fokus</h2>
+                <p class="text-neutral-400 max-w-2xl mx-auto text-sm md:text-base">Vertrauen bei führenden Marken.</p>
+            </div>
+            <div class="trust-logos px-2 py-2 overflow-hidden">
+                <img src="/logos/zalando.svg" alt="Zalando" width="896" height="172" loading="lazy" decoding="async" />
             <img src="/logos/siemens.svg" alt="Siemens" width="210" height="50" loading="lazy" decoding="async" />
             <img src="/logos/mercedes.svg" alt="Mercedes Benz" width="100" height="26" loading="lazy"
                 decoding="async" />
@@ -100,26 +101,27 @@
             <img src="/logos/t-systems.svg" alt="T-Systems" width="1531" height="314" loading="lazy" decoding="async" />
             <img src="/logos/condor.svg" alt="Condor" width="237" height="41" loading="lazy" decoding="async" />
         </div>
+        </div>
     </div>
 
     <!-- Kundenstimmen mit Buttons (helle Karten auf Weiß) -->
-    <div class="mx-auto max-w-4xl pb-30 text-center px-4 md:px-6 text-neutral-900">
+    <div class="mx-auto max-w-4xl pb-30 text-center px-4 md:px-6 text-neutral-100">
 
         <div class="relative">
             <button type="button" (click)="prevReview()" aria-label="Vorherige Kundenstimme"
-                class="absolute left-0 md:left-0 top-1/2 -translate-y-1/2 inline-flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-full border border-neutral-300 hover:border-neutral-500 bg-white text-neutral-700 cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white select-none">
+                class="absolute left-0 md:left-0 top-1/2 -translate-y-1/2 inline-flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-full border border-white/20 hover:border-white/40 bg-white/10 text-white cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 select-none">
                 <span class="text-sm md:text-base leading-none">◀</span>
             </button>
             <!-- Stack: alle Karten werden übereinandergelegt (gleiche Grid-Zelle) -> Container-Höhe = höchste Karte -->
             <div class="mx-10 md:mx-14 lg:mx-16">
                 <div class="grid relative">
                     <div *ngFor="let review of reviews; index as i"
-                        class="col-start-1 row-start-1 rounded-lg border border-neutral-200 bg-neutral-50 p-6 text-left flex flex-col h-full transition-opacity duration-500 ease-out shadow-sm"
+                        class="col-start-1 row-start-1 rounded-lg border border-white/10 bg-white/5 p-6 text-left flex flex-col h-full transition-opacity duration-500 ease-out shadow-sm"
                         [class.opacity-0]="i !== currentIndex" [class.pointer-events-none]="i !== currentIndex"
                         [attr.aria-hidden]="i !== currentIndex">
                         <!-- Gekürzt -->
                         <div *ngIf="!showFull" class="review-text-wrapper mb-5">
-                            <p class="review-text text-sm text-neutral-700 line-clamp-2">{{ review.text
+                            <p class="review-text text-sm text-neutral-300 line-clamp-2">{{ review.text
                                 }}</p>
                             <button type="button" (click)="toggleFull()"
                                 class="mt-2 inline-flex items-center text-xs font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 cursor-pointer p-0"
@@ -127,14 +129,14 @@
                         </div>
                         <!-- Vollständig -->
                         <div *ngIf="showFull" class="review-text-wrapper mb-5">
-                            <p class="review-text text-sm text-neutral-700">{{ review.text }}</p>
+                            <p class="review-text text-sm text-neutral-300">{{ review.text }}</p>
                             <button type="button" (click)="toggleFull()"
                                 class="mt-2 inline-flex items-center text-xs font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 cursor-pointer p-0"
                                 aria-label="Text wieder kürzen">Text ausblenden</button>
                         </div>
-                        <div class="flex items-center gap-3 text-xs text-neutral-600 mt-auto">
+                        <div class="flex items-center gap-3 text-xs text-neutral-400 mt-auto">
                             <span class="leading-none">{{ review.author }}</span>
-                            <span class="block h-4 w-px bg-neutral-300"></span>
+                            <span class="block h-4 w-px bg-white/10"></span>
                             <span class="flex gap-1 text-accent" aria-label="5 von 5 Sternen">
                                 <ng-container *ngFor="let star of [0,1,2,3,4]">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
@@ -149,7 +151,7 @@
                 </div>
             </div>
             <button type="button" (click)="nextReview()" aria-label="Nächste Kundenstimme"
-                class="absolute right-0 md:right-0 top-1/2 -translate-y-1/2 inline-flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-full border border-neutral-300 hover:border-neutral-500 bg-white text-neutral-700 cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white select-none">
+                class="absolute right-0 md:right-0 top-1/2 -translate-y-1/2 inline-flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-full border border-white/20 hover:border-white/40 bg-white/10 text-white cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 select-none">
                 <span class="text-sm md:text-base leading-none">▶</span>
             </button>
         </div>

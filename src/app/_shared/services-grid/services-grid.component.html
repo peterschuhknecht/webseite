@@ -1,15 +1,15 @@
-<section id="leistungen" class="mx-auto max-w-7xl px-6 lg:px-10 pb-32 text-neutral-900">
+<section id="leistungen" class="mx-auto max-w-7xl px-6 lg:px-10 pb-32 text-neutral-100">
     <div class="mx-auto max-w-7xl px-6 lg:px-10 mb-20" aria-hidden="true">
         <div class="section-sep"></div>
     </div>
 
     <div class="mb-14 text-center">
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">{{ sectionTitle }}</h2>
-        <p class="text-neutral-600 max-w-2xl mx-auto text-sm md:text-base">{{ subHeadline }}</p>
+        <p class="text-neutral-400 max-w-2xl mx-auto text-sm md:text-base">{{ subHeadline }}</p>
         <div class="mt-6 flex flex-wrap justify-center gap-3 text-xs">
             <button *ngFor="let cat of filterCategories" type="button" (click)="setFilter(cat)"
-                class="px-4 py-2 rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white select-none cursor-pointer"
-                [ngClass]="activeCategory===cat ? 'bg-accent text-neutral-950 border-accent' : 'border-neutral-300 text-neutral-700 hover:border-neutral-500'">
+                class="px-4 py-2 rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 select-none cursor-pointer"
+                [ngClass]="activeCategory===cat ? 'bg-accent text-neutral-950 border-accent' : 'border-white/20 text-neutral-300 hover:border-white/40'">
                 {{ cat }}
             </button>
         </div>
@@ -23,9 +23,9 @@
             </h3>
             <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
                 <div *ngFor="let s of filteredProgramming"
-                    class="group service-card-minh relative rounded-xl border border-neutral-200 bg-neutral-50 p-4 flex flex-col hover:border-neutral-300 transition-colors shadow-sm">
+                    class="group service-card-minh relative rounded-xl border border-white/10 bg-white/5 p-4 flex flex-col hover:border-white/20 transition-colors shadow-sm">
                     <h4 class="text-sm font-semibold leading-snug mb-2 pr-6">{{ s.title }}</h4>
-                    <p class="text-[16px] leading-snug text-neutral-700 mb-3">{{ s.text }}</p>
+                    <p class="text-[16px] leading-snug text-neutral-300 mb-3">{{ s.text }}</p>
                     <div class="mt-auto pt-1">
                         <a [routerLink]="['/kontakt']" [queryParams]="{ service: s.title }"
                             class="inline-flex items-center text-[11px] font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 rounded px-0"
@@ -42,9 +42,9 @@
             </h3>
             <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
                 <div *ngFor="let s of filteredAI"
-                    class="group service-card-minh relative rounded-xl border border-neutral-200 bg-neutral-50 p-4 flex flex-col hover:border-neutral-300 transition-colors shadow-sm">
+                    class="group service-card-minh relative rounded-xl border border-white/10 bg-white/5 p-4 flex flex-col hover:border-white/20 transition-colors shadow-sm">
                     <h4 class="text-sm font-semibold leading-snug mb-2 pr-6">{{ s.title }}</h4>
-                    <p class="text-[16px] leading-snug text-neutral-700 mb-3">{{ s.text }}</p>
+                    <p class="text-[16px] leading-snug text-neutral-300 mb-3">{{ s.text }}</p>
                     <div class="mt-auto pt-1">
                         <a [routerLink]="['/kontakt']" [queryParams]="{ service: s.title }"
                             class="inline-flex items-center text-[11px] font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 rounded px-0"
