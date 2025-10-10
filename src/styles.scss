@@ -1,6 +1,11 @@
 @use "tailwindcss";
 
 /* Einheitliches dunkles Design - kein Dark Mode Toggle */
+body {
+    background-color: #0b0c10;
+    color: #e4e4e7;
+}
+
 :root {
     --color-accent: #8fbd0e;
     --color-accent-hover: #a7d724;
@@ -51,10 +56,10 @@
 
     /* Abschnittsseparatoren */
     .section-sep {
-        /* Standard: für hellen Hintergrund sichtbar */
+        /* Standard: für dunklen Hintergrund sichtbar */
         --sep-alpha: .15;
-        --sep-rgb: 0, 0, 0;
-        /* dunkel auf hell */
+        --sep-rgb: 255, 255, 255;
+        /* hell auf dunkel */
         height: 1px;
         width: 100%;
         background: linear-gradient(to right,
@@ -75,6 +80,10 @@
     /* Auf dunklem Hintergrund weiterhin hell darstellen */
     .sep-on-dark {
         --sep-rgb: 255, 255, 255;
+    }
+
+    .sep-on-light {
+        --sep-rgb: 0, 0, 0;
     }
 
     /* Kontakt-Button Veredelungen (Utility-Ergänzungen) */
